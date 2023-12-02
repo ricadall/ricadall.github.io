@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<!--
+	Ethereal by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ethereal by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+		<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+		 <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<style>
+#chartdiv {
+  width: 100%;
+  height:  90%;
+	padding-top:3%;
+
+}
+			.highlight {
+    background-color: rgba(255,255,0,0.15);
+    font-weight: bold;
+}
+			
+				
+
+</style>
+		
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Wrapper -->
+					<div id="wrapper">
+
+						<!-- Panel (Banner) -->
+							<section class="panel banner right" style="background-color:#2C3E50">
+								<div class="content color0 span-3-75">
+									<h1 class="major">Analyzing Trends in Armed Conflicts from 1946-2022</h1>
+									<p>CORE 103 Research Project</p>
+									<ul class="actions">
+										<li><a href="#first" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
+									</ul>
+								</div>
+								<div class="image filtered span-1-75" data-position="25% 25%">
+									<img src="/menu_history_nagasaki.jpg" alt="" />
+								</div>
+							</section>
+						
+							<section class="panel " style="background-color:#EAECEE;color:black " id="first">
+								<div class="inner columns aligned" style="background-color:#EAECEE;color:black ">
+									
+									
+									<div class="span-4" style="background-color:#EAECEE;color:black ">
+										<h2 class="major" style="background-color:#EAECEE;color:black ">Quotes Inspiring Project</h2>
+										<h4 style="background-color:#EAECEE;color:black ">Lord Wolseley, 1899</h4>
+										<blockquote>"It can be proved to the hilt that scientific development of engines of destruction had tended  <span class="highlight">(a) to make nations hesitate before going to war; (b) to reduce the percentage of losses in war; (c) to shorten the length of campaigns, and thus to reduce to a minimum the sufferings endured by the inhabitants.</span>"</blockquote>
+										<h4 style="color:black ">Sven Lindqvist, "A History of Bombing"</h4>
+										<blockquote>"The wars that have actually been fought since 1945 have been in general what were called <span class="highlight">"little wars"</span> in the 19th century, and which today are called, <span class="highlight">quite misleadingly, "low-intensity conflicts."</span> They have often been waged from the air against people on the ground - but with little success. <span class="highlight">They have been conducted by developed nations in undeveloped ones</span>."</blockquote>
+									</div>
+									
+								</div>
+							</section>
+						
+						<section class="panel" style="background-color:#D6DBDF;color:black" >
+								<div class="inner columns aligned" style="background-color:#D6DBDF;color:black">
+									
+									
+									<div class="span-5" style="color:black ">
+										<h2 class="major" style="color:black ">Project Objective</h2>
+										<p>Lord Wolseley and Sven Lindqvist have alternate opinions on modern wars. Lord Wolseley believes more destructive modern wars not only act as a deterrent but also result in fewer deaths and shorten the length of the conflict. Lindqvist opposes the notion that modern wars are “low-intensity conflicts” and condones them for being primarily waged in less developed nations.</p>
+										<p>n light of these alternative opinions, my research objective is to analyze trends in conflicts to see if there have been changes from the end of WWII to now.</p>
+										<p>Specifically, I will be looking at the following factors:</p>
+										<div class="span-1-25">
+										<ul>
+											<li>Lorem ipsum dolor sit.</li>
+											<li>Dolor pulvinar etiam.</li>
+											<li>Etiam vel felis viverra.</li>
+										</ul>
+
+
+									</div>
+									</div>
+									
+								</div>
+							</section>
+						<section class="panel span-4-75" style="background-color:#EAECEE;color:black ">
+								<div class="inner columns aligned" style="background-color:#EAECEE;color:black ">
+									<div class="span-2" style="color:black ">
+										<h2 class="major" style="color:black ">Tools Used</h2>
+										<ul class="alt">
+											<li>All data clean, preprocessing and analysis was done using <b style="color:black ">Python</b>.</li>
+											<li>The data visualizations were created using <b style="color:black ">Python and Javascript</b> namely the D3.js and AmChart libraries</li>
+											<li>This website was coded in <b style="color:black ">HTML, CSS, and Javascript</b></li>
+										</ul>
+									</div>
+									
+									
+									
+								</div>
+							</section>
+						<section class="panel span-3-75" style="background-color:#D6DBDF;color:black" >
+								<div class="inner columns aligned" style="background-color:#D6DBDF;color:black">
+									
+									
+									<div class="span-4" style="background-color:#EAECEE;color:black ">
+										<h2 class="major" style="background-color:#EAECEE;color:black ">The Data</h2>
+										
+										
+									</div>
+									
+								</div>
+							</section>
+						
+						<section class="panel color5-alt" style="background-color:#2C3E50">
+								<div class="intro " style="background-color:#2C3E50">
+									<h2 class="major">Length of conflict</h2>
+									 <p>The first question I will be looking at is: <b>how has the average length of conflict changed from 1946 to 2022?</b></p>
+								</div>
+						</section>
+					   
+
+						<!-- Panel (Spotlight) -->
+							<section class="panel spotlight medium right span-5-75" >
+								<div id="chartdiv"></div>
+							</section>
+						
+						 <section class="panel color5-alt">
+								
+								<div class="inner columns aligned">
+									
+									<div class="span-2-75">
+										<h3 style="color:black" div="dark_text">Average Length of Conflict from 1946 to 2022</h3>
+										<h5 style="color:black"><i>hover over columns to show values</i></h5>
+										<p style="color:black">Process</p>
+										<p style="color:black">Findings</p>
+										<p style="color:black">We can see from this tbale that conflict has actually gotten longer. </p>
+
+									</div>
+									
+							</div>
+						</section>
+						
+						<section class="panel color5-alt" style="background-color:#2C3E50">
+								<div class="intro " style="background-color:#2C3E50">
+									<h2 class="major"># of Deaths</h2>
+									 <p>The first question I will be looking at is: <b>how has number of deaths in conflict changed from 1946 to 2022?</b></p>
+								</div>
+						</section>
+					   
+
+						<!-- Panel (Spotlight) -->
+							<section class="panel spotlight medium right span-5-75" id="first">
+								<div id="chart"></div>
+							</section>
+						
+						 <section class="panel color5-alt">
+								
+								<div class="inner columns aligned">
+									
+									<div class="span-2-75">
+										<h3 style="color:black" div="dark_text">Average Length of Conflict from 1946 to 2022</h3>
+										<h5 style="color:black"><i>hover over columns to show values</i></h5>
+										
+										<p style="color:black">We can see from this tbale that conflict has actually gotten longer. </p>
+
+									</div>
+									
+							</div>
+						</section>
+
+						
+
+						<!-- Copyright -->
+							<div class="copyright"></div>
+
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/main.js"></script>
+		
+<script>
+    am5.ready(function() {
+        // Create root element
+        var root = am5.Root.new("chartdiv");
+
+        // Set themes
+        root.setThemes([
+            am5themes_Animated.new(root)
+        ]);
+
+        // Create chart
+        var chart = root.container.children.push(am5xy.XYChart.new(root, {
+            panX: true,
+            panY: true,
+            wheelX: "panX",
+            wheelY: "zoomX"
+        }));
+		
+		root.numberFormatter.setAll({
+		  numberFormat: "####",
+		  numericFields: ["valueX"]
+		});
+
+        // Create axes
+        var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+            categoryField: "year",
+            renderer: am5xy.AxisRendererX.new(root, {}),
+            tooltip: am5.Tooltip.new(root, {}),
+			numberFormat: "####"
+        }));
+		
+
+        var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+            renderer: am5xy.AxisRendererY.new(root, {})
+        }));
+
+        // Create series
+        var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+            name: "Average Length of Conflict",
+            xAxis: xAxis,
+            yAxis: yAxis,
+            valueYField: "average length",
+            categoryXField: "year"
+        }));
+
+        series.columns.template.setAll({
+            tooltipText: "Year: {categoryX}\nAverage Length: {valueY}",
+            tooltipY: 0
+        });
+
+
+        var trendData = [
+            { "year": 1946, "average length": 500 },
+            { "year": 2021, "average length": 2000 }
+        ];
+
+        // Add a trendline - modify this section
+        var trend = chart.series.push(am5xy.LineSeries.new(root, {
+            name: "Trend",
+            xAxis: xAxis,
+            yAxis: yAxis,
+            valueYField: "average length",
+            categoryXField: "year",
+            stroke: am5.color(0xff0000),
+            strokeWidth: 2
+        }));
+
+        trend.strokes.template.setAll({
+            strokeDasharray: [3, 3]
+        });
+
+        
+		
+		
+        // Set data
+        var data = [
+        {'year': 1946, 'average length': 66.14285714285714},
+{'year': 1947, 'average length': 148.0},
+{'year': 1948, 'average length': 306.42857142857144},
+{'year': 1949, 'average length': 599.0},
+{'year': 1950, 'average length': 353.0},
+{'year': 1951, 'average length': 600.0},
+{'year': 1952, 'average length': 221.5},
+{'year': 1953, 'average length': 1395.6},
+{'year': 1954, 'average length': 1176.6},
+{'year': 1955, 'average length': 95.0},
+{'year': 1956, 'average length': 612.3333333333334},
+{'year': 1957, 'average length': 848.0},
+{'year': 1958, 'average length': 317.2},
+{'year': 1959, 'average length': 711.6},
+{'year': 1960, 'average length': 289.0},
+{'year': 1961, 'average length': 1271.1666666666667},
+{'year': 1962, 'average length': 653.6666666666666},
+{'year': 1963, 'average length': 1211.4},
+{'year': 1964, 'average length': 983.75},
+{'year': 1965, 'average length': 247.33333333333334},
+{'year': 1966, 'average length': 449.0},
+{'year': 1967, 'average length': 252.85714285714286},
+{'year': 1968, 'average length': 1106.0},
+{'year': 1969, 'average length': 339.0},
+{'year': 1970, 'average length': 2250.0},
+{'year': 1971, 'average length': 150.0},
+{'year': 1972, 'average length': 1057.8333333333333},
+{'year': 1973, 'average length': 1317.5},
+{'year': 1974, 'average length': 1552.0},
+{'year': 1975, 'average length': 2292.75},
+{'year': 1976, 'average length': 319.3333333333333},
+{'year': 1977, 'average length': 962.0},
+{'year': 1978, 'average length': 1043.25},
+{'year': 1979, 'average length': 622.8},
+{'year': 1980, 'average length': 372.8},
+{'year': 1981, 'average length': 209.57142857142858},
+{'year': 1982, 'average length': 1282.2222222222222},
+{'year': 1983, 'average length': 662.6666666666666},
+{'year': 1984, 'average length': 746.0},
+{'year': 1985, 'average length': 5.0},
+{'year': 1986, 'average length': 530.0},
+{'year': 1987, 'average length': 144.75},
+{'year': 1988, 'average length': 3547.3636363636365},
+{'year': 1989, 'average length': 1661.75},
+{'year': 1990, 'average length': 856.6666666666666},
+{'year': 1991, 'average length': 2206.75},
+{'year': 1992, 'average length': 2867.8333333333335},
+{'year': 1993, 'average length': 647.6},
+{'year': 1994, 'average length': 517.6},
+{'year': 1995, 'average length': 2477.5384615384614},
+{'year': 1996, 'average length': 1887.2666666666667},
+{'year': 1997, 'average length': 302.125},
+{'year': 1998, 'average length': 1649.7777777777778},
+{'year': 1999, 'average length': 1383.9},
+{'year': 2000, 'average length': 375.1666666666667},
+{'year': 2001, 'average length': 1576.888888888889},
+{'year': 2002, 'average length': 1403.6666666666667},
+{'year': 2003, 'average length': 914.4285714285714},
+{'year': 2004, 'average length': 565.9},
+{'year': 2005, 'average length': 614.0},
+{'year': 2006, 'average length': 1753.6},
+{'year': 2007, 'average length': 1241.0},
+{'year': 2008, 'average length': 264.77777777777777},
+{'year': 2009, 'average length': 704.25},
+{'year': 2010, 'average length': 1803.4},
+{'year': 2011, 'average length': 1588.6},
+{'year': 2012, 'average length': 1033.0},
+{'year': 2013, 'average length': 3239.6},
+{'year': 2014, 'average length': 429.6363636363636},
+{'year': 2015, 'average length': 535.0},
+{'year': 2016, 'average length': 2116.714285714286},
+{'year': 2017, 'average length': 819.25},
+{'year': 2018, 'average length': 3061.5},
+{'year': 2019, 'average length': 995.2727272727273},
+{'year': 2020, 'average length': 1296.5714285714287},
+{'year': 2021, 'average length': 1087.0}
+    ];
+
+        series.data.setAll(data);
+        trend.data.setAll(trendData);
+        xAxis.data.setAll(data);
+
+        // Make stuff animate on load
+        series.appear(1000);
+        chart.appear(1000, 100);
+    });
+</script>
+		
+		
+		<script>
+    // Load CSV data
+    d3.csv("/aggregated_deaths_by_year.csv").then(function(data) {
+        // Process and plot the data
+        data.forEach(function(d) {
+            d.Year = +d.Year; // Convert Year to numeric
+            d.Deaths = +d.Deaths; // Convert Deaths to numeric
+        });
+
+        // Set the dimensions and margins of the graph
+        const margin = {top: 10, right: 30, bottom: 30, left: 60},
+              width = 460 - margin.left - margin.right,
+              height = 400 - margin.top - margin.bottom;
+
+        // Append the svg object to the body of the page
+        const svg = d3.select("#chart")
+          .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Add X axis
+        const x = d3.scaleLinear()
+          .domain(d3.extent(data, function(d) { return d.Year; }))
+          .range([0, width]);
+        svg.append("g")
+          .attr("transform", `translate(0,${height})`)
+          .call(d3.axisBottom(x).tickFormat(d3.format("d"))) // Remove commas from x-axis labels
+          .selectAll("path,line,text")
+          .attr("stroke", "black")
+          .attr("fill", "black");
+
+        // Add Y axis
+        const y = d3.scaleLinear()
+          .domain([0, d3.max(data, function(d) { return d.Deaths; })])
+          .range([height, 0]);
+        svg.append("g")
+          .call(d3.axisLeft(y))
+          .selectAll("path,line,text")
+          .attr("stroke", "black")
+          .attr("fill", "black");
+
+        // Add the line
+        svg.append("path")
+          .datum(data)
+          .attr("fill", "none")
+          .attr("stroke", "#c83dac")
+          .attr("stroke-width", 1.5)
+          .attr("d", d3.line()
+            .x(function(d) { return x(d.Year) })
+            .y(function(d) { return y(d.Deaths) })
+          );
+    });
+</script>
+
+	</body>
+</html>
