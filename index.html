@@ -35,14 +35,24 @@
 }
 	#int_stacked_chartdiv {
   width: 100%;
-  height: 500px;
+  height:  90%;
+	padding-top:3%;
 }	
 			#int_stacked_chartdiv2 {
   width: 100%;
-  height: 500px;
+ height:  90%;
+	padding-top:3%;
 }
 				
-
+#cont_bd_chartdiv {
+  width: 100%;
+  height: 90%;
+}
+			
+	#regbdchartdiv {
+  width: 100%;
+  height: 500px;
+}
 </style>
 		
 
@@ -159,13 +169,14 @@
 								
 								<div class="inner columns aligned">
 									
-									<div class="span-2-75">
+									<div class="span-4-75">
 										<h3 style="color:black" div="dark_text">Average Length of Conflict from 1946 to 2022</h3>
 										<h5 style="color:black"><i>hover over columns to show values</i></h5>
 										<p style="color:black;text-emphasis: 600">Process</p>
-										<p style="color:black">I also parsed through the data in Python to generate a trendline. The bar graph was created using JavaScript (specifially amChart library)</p>
+										<p style="color:black"> I used Python to determine the number of days between the start date and end date (if available) of each conflict. I aggregated the dataframe based on the year the conflict began, and then computed the mean accordingly. I also parsed through the data in Python to generate a trendline. The bar graph was created using JavaScript (specifically amChart library)</p>
 										<p style="color:black">Findings</p>
-										<p style="color:black">One of Lord Weas "shorten the length of campaigns" We can see from this tbale that conflict has actually gotten longer. In fact, it appears to be quite steadily increasing.</p>
+										<p style="color:black">Lord Wolseley stated in 1899 that one of the benefits of the “scientific development of engines of destruction” and the increasingly modernized mechanisms of war has been its ability to  “shorten the length of campaigns”. However, this chart does not support this statement. It displays a clear increase in average length of conflict from 1946 to 2021. 
+</p>
 
 									</div>
 									
@@ -207,11 +218,15 @@
 								<div class="inner columns aligned">
 									
 									<div class="span-2-75">
-										<h3 style="color:black" div="dark_text">Average Length of Conflict from 1946 to 2022</h3>
+										<h3 style="color:black" div="dark_text">Percentage Breakdown of Intensity of Conflict over Time
+</h3>
 										<h5 style="color:black"><i>hover over columns to show values</i></h5>
 										<p style="color:black">Process</p>
+										<p style="color:black"> I calculated the proportional representation of each intensity level of conflict for each year. This involved aggregating and normalizing the data in Python before visualizing it with a stacked area chart using JavaScript's Highcharts library.</p>
+<!--
 										<p style="color:black">Findings</p>
 										<p style="color:black">We can see from this tbale that conflict has actually gotten longer. </p>
+-->
 
 									</div>
 									
@@ -228,11 +243,14 @@
 								<div class="inner columns aligned">
 									
 									<div class="span-2-75">
-										<h3 style="color:black" div="dark_text">Average Length of Conflict from 1946 to 2022</h3>
+										<h3 style="color:black" div="dark_text"># of Conflicts by Intensity Level over Time</h3>
 										<h5 style="color:black"><i>hover over columns to show values</i></h5>
 										<p style="color:black">Process</p>
+										<p style="color:black">I used Python to classify each conflict according to its intensity and then tallied the annual frequency of conflicts at each intensity level. The data was visualized using a multi-layered bar graph created with the JavaScript amCharts library,</p>
+<!--									
 										<p style="color:black">Findings</p>
 										<p style="color:black">We can see from this tbale that conflict has actually gotten longer. </p>
+-->
 
 									</div>
 									
@@ -259,7 +277,8 @@
 									<div class="span-2-75">
 										<h3 style="color:black" div="dark_text"># of Battle Deaths Every Year from 1946 to 2021</h3>
 										<h5 style="color:black"><i>hover over columns to show values</i></h5>
-										
+										<p style="color:black">Process</p>
+										<p style="color:black" >Using Python, I merged the second and third dataset, mapping the corresponding columns. I then aggregated the total battle-related fatalities per year and depicted this cumulative data using the JavaScripts amCharts library </p>
 										
 
 									</div>
@@ -285,9 +304,10 @@
 								<div class="inner columns aligned">
 									
 									<div class="span-2-75">
-										<h3 style="color:black" div="dark_text"># of Conflics Started Every Year from 1946 to 2021</h3>
+										<h3 style="color:black" div="dark_text"># of Conflicts Started Every Year from 1946 to 2021</h3>
 										
-										
+										<p style="color:black"> Process</p>
+										<p style="color:black" > I determined the yearly onset of conflicts using Python and displayed the results in a chronological bar graph, using JavaScript and amCharts</p>
 										
 
 									</div>
@@ -336,7 +356,7 @@
 									
 									<div class="span-8-75">
 										<div class="inner columns aligned">
-										<div style="margin:8%" id="my_dataviz"></div>
+										<div id="regbdchartdiv"></div>
 											
 											</div>
 
@@ -345,29 +365,55 @@
 							</div>
 							</section>
 						
-<!--
-						 <section class="panel color15-alt">
-								<div id="my_dataviz"></div>
-								<div class="inner columns aligned">
-									
-									<div class="span-8-75">
-										<div id="my_dataviz"></div>
-
-									</div>
-									
-							</div>
-						</section>
--->
 						
 						 <section class="panel color5-alt">
 								
 								<div class="inner columns aligned">
 									
 									<div class="span-2-75">
-										<h3 style="color:black" div="dark_text"># of Conflics Started Each Year by Region</h3>
+										<h3 style="color:black" div="dark_text"># of Conflicts Started Each Year by Region</h3>
 										
+										<p style="color:black"> Process</p>
+										<p style="color:black">Using Python, I segmented the conflict data based on its geographical origin and then calculated the annual count for each region per year.I then visualized this using Javascript (specifically D3.js)</p>
+
+									</div>
+									
+							</div>
+						</section>
+						
+												<section class="panel color5-alt" style="background-color:#2C3E50">
+								<div class="intro " style="background-color:#2C3E50">
+									<h2 class="major">Frequency of Conflict by Region</h2>
+									 <p>While the global frequency of conflict may have decreased <b>Is this true for every region?</b></p>
+								</div>
+						</section>
+					   
+
+						<!-- Panel (Spotlight) -->
+							<section class="panel color5-alt">
+								
+									
+									<div class="span-3-75">
+										<div class="inner columns aligned">
+										<div style="margin:8%" id="cont_bd_chartdiv"></div>
+											
+											</div>
+
+								
+									
+							</div>
+							</section>
+						
+						
+						 <section class="panel color5-alt">
+								
+								<div class="inner columns aligned">
+									
+									<div class="span-2-75">
+										<h3 style="color:black" div="dark_text"># of Battle Deaths each Year by Region</h3>
 										
-										
+										<p style="color:black"> Process</p>
+										<p style="color:black"></p>
 
 									</div>
 									
@@ -939,6 +985,247 @@ d3.csv("conflict_count.csv", function(data) {
     .style("fill", function(d){ return color(d.key) })
 
 })
+</script>
+		
+		
+		
+		
+		<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+var chart = am4core.create("cont_bd_chartdiv", am4charts.XYChart);
+
+chart.data = [{'year': '1946', 'Africa': 0.0, 'Americas': 1000.0, 'Asia': 239028.0, 'Europe': 50381.0, 'Middle East': 137.0}, {'year': 1947, 'Africa': 0.0, 'Americas': 4000.0, 'Asia': 340028.0, 'Europe': 48684.0, 'Middle East': 0.0}, {'year': 1948, 'Africa': 0.0, 'Americas': 2000.0, 'Asia': 396729.0, 'Europe': 42849.0, 'Middle East': 23792.0}, {'year': 1949, 'Africa': 0.0, 'Americas': 40.0, 'Asia': 383217.0, 'Europe': 37501.0, 'Middle East': 1575.0}, {'year': 1950, 'Africa': 0.0, 'Americas': 34.0, 'Asia': 536221.0, 'Europe': 0.0, 'Middle East': 256.0}, {'year': 1951, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 385398.0, 'Europe': 0.0, 'Middle East': 350.0}, {'year': 1952, 'Africa': 2591.0, 'Americas': 0.0, 'Asia': 138291.0, 'Europe': 0.0, 'Middle East': 345.0}, {'year': 1953, 'Africa': 1792.0, 'Americas': 28.0, 'Asia': 86918.0, 'Europe': 0.0, 'Middle East': 256.0}, {'year': 1954, 'Africa': 22872.0, 'Americas': 0.0, 'Asia': 40936.0, 'Europe': 0.0, 'Middle East': 256.0}, {'year': 1955, 'Africa': 22272.0, 'Americas': 0.0, 'Asia': 2365.0, 'Europe': 0.0, 'Middle East': 256.0}, {'year': 1956, 'Africa': 22272.0, 'Americas': 0.0, 'Asia': 6969.0, 'Europe': 2172.0, 'Middle East': 2398.0}, {'year': 1957, 'Africa': 22183.0, 'Americas': 0.0, 'Asia': 1859.0, 'Europe': 0.0, 'Middle East': 0}, {'year': 1958, 'Africa': 22183.0, 'Americas': 0.0, 'Asia': 13326.0, 'Europe': 0.0, 'Middle East': 657.0}, {'year': 1959, 'Africa': 24181.0, 'Americas': 0.0, 'Asia': 17528.0, 'Europe': 0.0, 'Middle East': 2256.0}, {'year': 1960, 'Africa': 16609.0, 'Americas': 0.0, 'Asia': 6541.0, 'Europe': 0.0, 'Middle East': 256.0}, {'year': 1961, 'Africa': 25822.0, 'Americas': 0.0, 'Asia': 6594.0, 'Europe': 1180.0, 'Middle East': 0}, {'year': 1962, 'Africa': 25004.0, 'Americas': 400.0, 'Asia': 16181.0, 'Europe': 1180.0, 'Middle East': 1742.0}, {'year': 1963, 'Africa': 6507.0, 'Americas': 25.0, 'Asia': 46322.0, 'Europe': 0.0, 'Middle East': 0}, {'year': 1964, 'Africa': 6286.0, 'Americas': 230.0, 'Asia': 36502.0, 'Europe': 0.0, 'Middle East': 1717.0}, {'year': 1965, 'Africa': 7305.0, 'Americas': 4665.0, 'Asia': 66621.0, 'Europe': 0.0, 'Middle East': 1642.0}, {'year': 1966, 'Africa': 4568.0, 'Americas': 400.0, 'Asia': 69657.0, 'Europe': 0.0, 'Middle East': 2366.0}, {'year': 1967, 'Africa': 19845.0, 'Americas': 502.0, 'Asia': 80002.0, 'Europe': 0.0, 'Middle East': 2943.0}, {'year': 1968, 'Africa': 33605.0, 'Americas': 1010.0, 'Asia': 178083.0, 'Europe': 0.0, 'Middle East': 2741.0}, {'year': 1969, 'Africa': 33554.0, 'Americas': 3797.0, 'Asia': 136152.0, 'Europe': 0.0, 'Middle East': 1188.0}, {'year': 1970, 'Africa': 6942.0, 'Americas': 1720.0, 'Asia': 175822.0, 'Europe': 0.0, 'Middle East': 848.0}, {'year': 1971, 'Africa': 3953.0, 'Americas': 1650.0, 'Asia': 181606.0, 'Europe': 171.0, 'Middle East': 256.0}, {'year': 1972, 'Africa': 4722.0, 'Americas': 2061.0, 'Asia': 269915.0, 'Europe': 479.0, 'Middle East': 696.0}, {'year': 1973, 'Africa': 3514.0, 'Americas': 3395.0, 'Asia': 183937.0, 'Europe': 253.0, 'Middle East': 10582.0}, {'year': 1974, 'Africa': 3220.0, 'Americas': 2575.0, 'Asia': 220417.0, 'Europe': 294.0, 'Middle East': 0}, {'year': 1975, 'Africa': 3690.0, 'Americas': 2040.0, 'Asia': 89120.0, 'Europe': 260.0, 'Middle East': 8998.0}, {'year': 1976, 'Africa': 15125.0, 'Americas': 2580.0, 'Asia': 1420.0, 'Europe': 295.0, 'Middle East': 61258.0}, {'year': 1977, 'Africa': 15915.0, 'Americas': 1717.0, 'Asia': 421.0, 'Europe': 111.0, 'Middle East': 0}, {'year': 1978, 'Africa': 23709.0, 'Americas': 4300.0, 'Asia': 45827.0, 'Europe': 81.0, 'Middle East': 0}, {'year': 1979, 'Africa': 16019.0, 'Americas': 9570.0, 'Asia': 102938.0, 'Europe': 121.0, 'Middle East': 0}, {'year': 1980, 'Africa': 18583.0, 'Americas': 3599.0, 'Asia': 40429.0, 'Europe': 171.0, 'Middle East': 31862.0}, {'year': 1981, 'Africa': 15864.0, 'Americas': 19541.0, 'Asia': 33633.0, 'Europe': 143.0, 'Middle East': 90812.0}, {'year': 1982, 'Africa': 18180.0, 'Americas': 14838.0, 'Asia': 38533.0, 'Europe': 1074.0, 'Middle East': 125042.0}, {'year': 1983, 'Africa': 20372.0, 'Americas': 16913.0, 'Asia': 57535.0, 'Europe': 85.0, 'Middle East': 99899.0}, {'year': 1984, 'Africa': 50472.0, 'Americas': 16898.0, 'Asia': 84702.0, 'Europe': 69.0, 'Middle East': 68907.0}, {'year': 1985, 'Africa': 49311.0, 'Americas': 13168.0, 'Asia': 71274.0, 'Europe': 57.0, 'Middle East': 68882.0}, {'year': 1986, 'Africa': 53154.0, 'Americas': 11638.0, 'Asia': 64839.0, 'Europe': 61.0, 'Middle East': 66884.0}, {'year': 1987, 'Africa': 46372.0, 'Americas': 11419.0, 'Asia': 46097.0, 'Europe': 150.0, 'Middle East': 61919.0}, {'year': 1988, 'Africa': 24753.0, 'Americas': 6798.0, 'Asia': 33595.0, 'Europe': 104.0, 'Middle East': 61948.0}, {'year': 1989, 'Africa': 24611.0, 'Americas': 10152.0, 'Asia': 19381.0, 'Europe': 984.0, 'Middle East': 7332.0}, {'year': 1990, 'Africa': 35616.0, 'Americas': 5084.0, 'Asia': 6757.0, 'Europe': 501.0, 'Middle East': 8043.0}, {'year': 1991, 'Africa': 5845.0, 'Americas': 2763.0, 'Asia': 8505.0, 'Europe': 0.0, 'Middle East': 25257.0}, {'year': 1992, 'Africa': 403.0, 'Americas': 3140.0, 'Asia': 11782.0, 'Europe': 17628.0, 'Middle East': 300.0}, {'year': 1993, 'Africa': 17910.0, 'Americas': 2441.0, 'Asia': 18810.0, 'Europe': 14281.0, 'Middle East': 2615.0}, {'year': 1994, 'Africa': 11935.0, 'Americas': 1668.0, 'Asia': 14773.0, 'Europe': 7503.0, 'Middle East': 3689.0}, {'year': 1995, 'Africa': 3102.0, 'Americas': 566.0, 'Asia': 12063.0, 'Europe': 28852.0, 'Middle East': 5551.0}, {'year': 1996, 'Africa': 3334.0, 'Americas': 1337.0, 'Asia': 10470.0, 'Europe': 16000.0, 'Middle East': 3439.0}, {'year': 1997, 'Africa': 10758.0, 'Americas': 1280.0, 'Asia': 6690.0, 'Europe': 0.0, 'Middle East': 4380.0}, {'year': 1998, 'Africa': 53534.0, 'Americas': 1504.0, 'Asia': 11783.0, 'Europe': 1055.0, 'Middle East': 2180.0}, {'year': 1999, 'Africa': 71089.0, 'Americas': 1380.0, 'Asia': 5322.0, 'Europe': 18100.0, 'Middle East': 949.0}, {'year': 2000, 'Africa': 45226.0, 'Americas': 1469.0, 'Asia': 5210.0, 'Europe': 14500.0, 'Middle East': 291.0}, {'year': 2001, 'Africa': 33565.0, 'Americas': 13840.0, 'Asia': 7898.0, 'Europe': 5122.0, 'Middle East': 567.0}, {'year': 2002, 'Africa': 2218.0, 'Americas': 3381.0, 'Asia': 5116.0, 'Europe': 5000.0, 'Middle East': 440.0}, {'year': 2003, 'Africa': 4297.0, 'Americas': 2576.0, 'Asia': 19495.0, 'Europe': 2000.0, 'Middle East': 850.0}, {'year': 2004, 'Africa': 285.0, 'Americas': 2435.0, 'Asia': 6583.0, 'Europe': 2027.0, 'Middle East': 21377.0}, {'year': 2005, 'Africa': 1353.0, 'Americas': 3019.0, 'Asia': 5663.0, 'Europe': 2083.0, 'Middle East': 22337.0}, {'year': 2006, 'Africa': 206.0, 'Americas': 3148.0, 'Asia': 11557.0, 'Europe': 350.0, 'Middle East': 37324.0}, {'year': 2007, 'Africa': 785.0, 'Americas': 3322.0, 'Asia': 17712.0, 'Europe': 357.0, 'Middle East': 34488.0}, {'year': 2008, 'Africa': 545.0, 'Americas': 2155.0, 'Asia': 25118.0, 'Europe': 960.0, 'Middle East': 14953.0}, {'year': 2009, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 0.0, 'Europe': 0.0, 'Middle East': 0.0}, {'year': 2010, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 0.0, 'Europe': 0.0, 'Middle East': 0.0}, {'year': 2011, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 0.0, 'Europe': 0.0, 'Middle East': 0.0}, {'year': 2012, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 0.0, 'Europe': 0.0, 'Middle East': 0.0}, {'year': 2013, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 0.0, 'Europe': 0.0, 'Middle East': 0.0}, {'year': 2014, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 0.0, 'Europe': 0.0, 'Middle East': 0.0}, {'year': 2015, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 0.0, 'Europe': 0.0, 'Middle East': 0.0}, {'year': 2016, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 0.0, 'Europe': 0.0, 'Middle East': 0.0}, {'year': 2017, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 0.0, 'Europe': 0.0, 'Middle East': 0.0}, {'year': 2018, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 0.0, 'Europe': 0.0, 'Middle East': 0.0}, {'year': 2019, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 0.0, 'Europe': 0.0, 'Middle East': 0.0}, {'year': 2020, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 0.0, 'Europe': 0.0, 'Middle East': 0.0}, {'year': 2021, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 0.0, 'Europe': 0.0, 'Middle East': 0.0}, {'year': 2022, 'Africa': 0.0, 'Americas': 0.0, 'Asia': 0.0, 'Europe': 0.0, 'Middle East': 0.0}] ;
+	
+chart.dateFormatter.inputDateFormat = "yyyy";
+var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+dateAxis.renderer.minGridDistance = 60;
+dateAxis.startLocation = 0.5;
+dateAxis.endLocation = 0.5;
+dateAxis.baseInterval = {
+  timeUnit: "year",
+  count: 1
+}
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.tooltip.disabled = true;
+
+var series = chart.series.push(new am4charts.LineSeries());
+series.dataFields.dateX = "year";
+series.name = "Americas";
+series.dataFields.valueY = "Americas";
+//series.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/car.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series.tooltipText = "[#000]{valueY.value}[/]";
+series.tooltipText = "[#000]Americas: {valueY.value}";
+series.tooltip.background.fill = am4core.color("#FFF");
+series.tooltip.getStrokeFromObject = true;
+series.tooltip.background.strokeWidth = 3;
+series.tooltip.getFillFromObject = false;
+series.fillOpacity = 0.6;
+series.strokeWidth = 2;
+series.stacked = true;
+
+var series2 = chart.series.push(new am4charts.LineSeries());
+series2.name = "Europe";
+series2.dataFields.dateX = "year";
+series2.dataFields.valueY = "Europe";
+//series2.tooltipHTML = "<img src='icons/europeicon.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series2.tooltipText = "[#000]{valueY.value}[/]";
+series2.tooltipText = "[#000]Europe: {valueY.value}";
+series2.tooltip.background.fill = am4core.color("#FFF");
+series2.tooltip.getFillFromObject = false;
+series2.tooltip.getStrokeFromObject = true;
+series2.tooltip.background.strokeWidth = 3;
+series2.sequencedInterpolation = true;
+series2.fillOpacity = 0.6;
+series2.stacked = true;
+series2.strokeWidth = 2;
+
+var series3 = chart.series.push(new am4charts.LineSeries());
+series3.name = "Middle East";
+series3.dataFields.dateX = "year";
+series3.dataFields.valueY = "Middle East";
+//series3.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/bicycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series3.tooltipText = "[#000]{valueY.value}[/]";
+series3.tooltipText = "[#000]Middle East: {valueY.value}";
+series3.tooltip.background.fill = am4core.color("#FFF");
+series3.tooltip.getFillFromObject = false;
+series3.tooltip.getStrokeFromObject = true;
+series3.tooltip.background.strokeWidth = 3;
+series3.sequencedInterpolation = true;
+series3.fillOpacity = 0.6;
+series3.defaultState.transitionDuration = 1000;
+series3.stacked = true;
+series3.strokeWidth = 2;
+	
+var series4 = chart.series.push(new am4charts.LineSeries());
+series4.name = "Asia";
+series4.dataFields.dateX = "year";
+series4.dataFields.valueY = "Asia";
+//series4.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/bicycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series4.tooltipText = "[#000]{valueY.value}[/]";
+series4.tooltipText = "[#000]Asia: {valueY.value}";
+series4.tooltip.background.fill = am4core.color("#FFF");
+series4.tooltip.getFillFromObject = false;
+series4.tooltip.getStrokeFromObject = true;
+series4.tooltip.background.strokeWidth = 3;
+series4.sequencedInterpolation = true;
+series4.fillOpacity = 0.6;
+series4.defaultState.transitionDuration = 1000;
+series4.stacked = true;
+series4.strokeWidth = 2;
+	
+var series5 = chart.series.push(new am4charts.LineSeries());
+series5.name = "Africa";
+series5.dataFields.dateX = "year";
+series5.dataFields.valueY = "Africa";
+//series5.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/bicycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series5.tooltipText = "[#000]{valueY.value}[/]";
+series5.tooltipText = "[#000]Africa: {valueY.value}";
+series5.tooltip.background.fill = am4core.color("#FFF");
+series5.tooltip.getFillFromObject = false;
+series5.tooltip.getStrokeFromObject = true;
+series5.tooltip.background.strokeWidth = 3;
+series5.sequencedInterpolation = true;
+series5.fillOpacity = 0.6;
+series5.defaultState.transitionDuration = 1000;
+series5.stacked = true;
+series5.strokeWidth = 2;
+
+chart.cursor = new am4charts.XYCursor();
+chart.cursor.xAxis = dateAxis;
+chart.scrollbarX = new am4core.Scrollbar();
+
+// Add a legend
+chart.legend = new am4charts.Legend();
+chart.legend.position = "top";
+
+
+
+}); // end am4core.ready()
+</script>
+		
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+var chart = am4core.create("regbdchartdiv", am4charts.XYChart);
+
+chart.data = [{'year': '1989', 'Europe': 287.0, 'Middle East': 1257.0, 'Asia': 9714.0, 'Africa': 34873.0, 'Americas': 8715.0}, {'year': '1990', 'Europe': 236.0, 'Middle East': 2480.0, 'Asia': 10065.0, 'Africa': 64839.0, 'Americas': 2610.0}, {'year': '1991', 'Europe': 3400.0, 'Middle East': 23767.0, 'Asia': 15508.0, 'Africa': 25480.0, 'Americas': 2183.0}, {'year': '1992', 'Europe': 24592.0, 'Middle East': 2134.0, 'Asia': 17039.0, 'Africa': 6887.0, 'Americas': 2726.0}, {'year': '1993', 'Europe': 16717.0, 'Middle East': 2868.0, 'Asia': 9385.0, 'Africa': 15064.0, 'Americas': 912.0}, {'year': '1994', 'Europe': 8758.0, 'Middle East': 5899.0, 'Asia': 12642.0, 'Africa': 9605.0, 'Americas': 1558.0}, {'year': '1995', 'Europe': 11479.0, 'Middle East': 4102.0, 'Asia': 12719.0, 'Africa': 6678.0, 'Americas': 1127.0}, {'year': '1996', 'Europe': 2721.0, 'Middle East': 4613.0, 'Asia': 12034.0, 'Africa': 7667.0, 'Americas': 1309.0}, {'year': '1997', 'Europe': 29.0, 'Middle East': 4839.0, 'Asia': 11493.0, 'Africa': 23582.0, 'Americas': 653.0}, {'year': '1998', 'Europe': 1298.0, 'Middle East': 2149.0, 'Asia': 12231.0, 'Africa': 23274.0, 'Americas': 964.0}, {'year': '1999', 'Europe': 7258.0, 'Middle East': 1469.0, 'Asia': 9244.0, 'Africa': 61206.0, 'Americas': 1449.0}, {'year': '2000', 'Europe': 2907.0, 'Middle East': 323.0, 'Asia': 13571.0, 'Africa': 59714.0, 'Americas': 1870.0}, {'year': '2001', 'Europe': 2260.0, 'Middle East': 495.0, 'Asia': 7855.0, 'Africa': 10595.0, 'Americas': 4844.0}, {'year': '2002', 'Europe': 1289.0, 'Middle East': 667.0, 'Asia': 7430.0, 'Africa': 7249.0, 'Americas': 4257.0}, {'year': '2003', 'Europe': 8407.0, 'Middle East': 8317.0, 'Asia': 13815.0, 'Africa': 6430.0, 'Americas': 9589.0}, {'year': '2004', 'Europe': 1178.0, 'Middle East': 4675.0, 'Asia': 5749.0, 'Africa': 5999.0, 'Americas': 1819.0}, {'year': '2005', 'Europe': 707.0, 'Middle East': 3052.0, 'Asia': 5294.0, 'Africa': 1588.0, 'Americas': 1497.0}, {'year': '2006', 'Europe': 259.0, 'Middle East': 5410.0, 'Asia': 9607.0, 'Africa': 3694.0, 'Americas': 748.0}, {'year': '2007', 'Europe': 176.0, 'Middle East': 3073.0, 'Asia': 12080.0, 'Africa': 3349.0, 'Americas': 534.0}, {'year': '2008', 'Europe': 1055.0, 'Middle East': 3489.0, 'Asia': 18906.0, 'Africa': 4653.0, 'Americas': 575.0}, {'year': '2009', 'Europe': 696.0, 'Middle East': 2106.0, 'Asia': 25281.0, 'Africa': 5600.0, 'Americas': 920.0}, {'year': '2010', 'Europe': 418.0, 'Middle East': 1620.0, 'Asia': 14302.0, 'Africa': 3971.0, 'Americas': 776.0}, {'year': '2011', 'Europe': 359.0, 'Middle East': 4119.0, 'Asia': 11765.0, 'Africa': 8422.0, 'Americas': 405.0}, {'year': '2012', 'Europe': 541.0, 'Middle East': 54470.0, 'Asia': 12065.0, 'Africa': 6520.0, 'Americas': 436.0}, {'year': '2013', 'Europe': 321.0, 'Middle East': 74489.0, 'Asia': 11293.0, 'Africa': 7201.0, 'Americas': 178.0}, {'year': '2014', 'Europe': 5106.0, 'Middle East': 83562.0, 'Asia': 16604.0, 'Africa': 10333.0, 'Americas': 257.0}, {'year': '2015', 'Europe': 1943.0, 'Middle East': 70044.0, 'Asia': 21119.0, 'Africa': 10281.0, 'Americas': 221.0}, {'year': '2016', 'Europe': 464.0, 'Middle East': 59512.0, 'Asia': 20060.0, 'Africa': 9925.0, 'Americas': 147.0}, {'year': '2017', 'Europe': 504.0, 'Middle East': 39270.0, 'Asia': 22545.0, 'Africa': 9425.0, 'Americas': 111.0}, {'year': '2018', 'Europe': 273.0, 'Middle East': 20276.0, 'Asia': 27308.0, 'Africa': 6838.0, 'Americas': 131.0}, {'year': '2019', 'Europe': 337.0, 'Middle East': 11861.0, 'Asia': 31686.0, 'Africa': 8391.0, 'Americas': 152.0}, {'year': '2020', 'Europe': 7872.0, 'Middle East': 12938.0, 'Asia': 21987.0, 'Africa': 11012.0, 'Americas': 28.0}, {'year': '2021', 'Europe': 248.0, 'Middle East': 26416.0, 'Asia': 37880.0, 'Africa': 19445.0, 'Americas': 113.0}, {'year': '2022', 'Europe': 81854.0, 'Middle East': 5056.0, 'Asia': 4298.0, 'Africa': 112726.0, 'Americas': 73.0}];
+
+chart.dateFormatter.inputDateFormat = "yyyy";
+var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+dateAxis.renderer.minGridDistance = 60;
+dateAxis.startLocation = 0.5;
+dateAxis.endLocation = 0.5;
+dateAxis.baseInterval = {
+  timeUnit: "year",
+  count: 1
+}
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.tooltip.disabled = true;
+
+var series = chart.series.push(new am4charts.LineSeries());
+series.dataFields.dateX = "year";
+series.name = "Americas";
+series.dataFields.valueY = "Americas";
+//series.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/car.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series.tooltipText = "[#000]{valueY.value}[/]";
+series.tooltipText = "[#000]Americas: {valueY.value}";
+series.tooltip.background.fill = am4core.color("#FFF");
+series.tooltip.getStrokeFromObject = true;
+series.tooltip.background.strokeWidth = 3;
+series.tooltip.getFillFromObject = false;
+series.fillOpacity = 0.6;
+series.strokeWidth = 2;
+series.stacked = true;
+
+var series2 = chart.series.push(new am4charts.LineSeries());
+series2.name = "Europe";
+series2.dataFields.dateX = "year";
+series2.dataFields.valueY = "Europe";
+//series2.tooltipHTML = "<img src='icons/europeicon.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series2.tooltipText = "[#000]{valueY.value}[/]";
+series2.tooltipText = "[#000]Europe: {valueY.value}";
+series2.tooltip.background.fill = am4core.color("#FFF");
+series2.tooltip.getFillFromObject = false;
+series2.tooltip.getStrokeFromObject = true;
+series2.tooltip.background.strokeWidth = 3;
+series2.sequencedInterpolation = true;
+series2.fillOpacity = 0.6;
+series2.stacked = true;
+series2.strokeWidth = 2;
+
+var series3 = chart.series.push(new am4charts.LineSeries());
+series3.name = "Middle East";
+series3.dataFields.dateX = "year";
+series3.dataFields.valueY = "Middle East";
+//series3.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/bicycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series3.tooltipText = "[#000]{valueY.value}[/]";
+series3.tooltipText = "[#000]Middle East: {valueY.value}";
+series3.tooltip.background.fill = am4core.color("#FFF");
+series3.tooltip.getFillFromObject = false;
+series3.tooltip.getStrokeFromObject = true;
+series3.tooltip.background.strokeWidth = 3;
+series3.sequencedInterpolation = true;
+series3.fillOpacity = 0.6;
+series3.defaultState.transitionDuration = 1000;
+series3.stacked = true;
+series3.strokeWidth = 2;
+	
+var series4 = chart.series.push(new am4charts.LineSeries());
+series4.name = "Asia";
+series4.dataFields.dateX = "year";
+series4.dataFields.valueY = "Asia";
+//series4.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/bicycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series4.tooltipText = "[#000]{valueY.value}[/]";
+series4.tooltipText = "[#000]Asia: {valueY.value}";
+series4.tooltip.background.fill = am4core.color("#FFF");
+series4.tooltip.getFillFromObject = false;
+series4.tooltip.getStrokeFromObject = true;
+series4.tooltip.background.strokeWidth = 3;
+series4.sequencedInterpolation = true;
+series4.fillOpacity = 0.6;
+series4.defaultState.transitionDuration = 1000;
+series4.stacked = true;
+series4.strokeWidth = 2;
+	
+var series5 = chart.series.push(new am4charts.LineSeries());
+series5.name = "Africa";
+series5.dataFields.dateX = "year";
+series5.dataFields.valueY = "Africa";
+//series5.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/bicycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series5.tooltipText = "[#000]{valueY.value}[/]";
+series5.tooltipText = "[#000]Africa: {valueY.value}";
+series5.tooltip.background.fill = am4core.color("#FFF");
+series5.tooltip.getFillFromObject = false;
+series5.tooltip.getStrokeFromObject = true;
+series5.tooltip.background.strokeWidth = 3;
+series5.sequencedInterpolation = true;
+series5.fillOpacity = 0.6;
+series5.defaultState.transitionDuration = 1000;
+series5.stacked = true;
+series5.strokeWidth = 2;
+
+chart.cursor = new am4charts.XYCursor();
+chart.cursor.xAxis = dateAxis;
+chart.scrollbarX = new am4core.Scrollbar();
+
+// Add a legend
+chart.legend = new am4charts.Legend();
+chart.legend.position = "top";
+
+
+
+}); // end am4core.ready()
 </script>
 
 	</body>
