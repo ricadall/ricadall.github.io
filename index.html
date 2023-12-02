@@ -5,12 +5,15 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	 <meta charset="utf-8">
 	<head>
 		<title>Ethereal by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
 		<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
 		<script src="https://d3js.org/d3.v7.min.js"></script>
+		
 <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 		 <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
@@ -30,7 +33,14 @@
     background-color: rgba(255,255,0,0.15);
     font-weight: bold;
 }
-			
+	#int_stacked_chartdiv {
+  width: 100%;
+  height: 500px;
+}	
+			#int_stacked_chartdiv2 {
+  width: 100%;
+  height: 500px;
+}
 				
 
 </style>
@@ -78,16 +88,18 @@
 								<div class="inner columns aligned" style="background-color:#D6DBDF;color:black">
 									
 									
-									<div class="span-5" style="color:black ">
+									<div class="span-7" style="color:black ">
 										<h2 class="major" style="color:black ">Project Objective</h2>
 										<p>Lord Wolseley and Sven Lindqvist have alternate opinions on modern wars. Lord Wolseley believes more destructive modern wars not only act as a deterrent but also result in fewer deaths and shorten the length of the conflict. Lindqvist opposes the notion that modern wars are “low-intensity conflicts” and condones them for being primarily waged in less developed nations.</p>
-										<p>n light of these alternative opinions, my research objective is to analyze trends in conflicts to see if there have been changes from the end of WWII to now.</p>
+										<p>In light of these opposing opinions, my research objective is to analyze trends in conflicts to see if there have been changes from the end of WWII to now.</p>
 										<p>Specifically, I will be looking at the following factors:</p>
 										<div class="span-1-25">
 										<ul>
-											<li>Lorem ipsum dolor sit.</li>
-											<li>Dolor pulvinar etiam.</li>
-											<li>Etiam vel felis viverra.</li>
+											<li>Length of conflict</li>
+											<li>Intensity of conflict</li>
+											<li># of deaths</li>
+											<li>Frequency of conflict</li>
+											<li>Location trends</li>
 										</ul>
 
 
@@ -101,7 +113,7 @@
 									<div class="span-2" style="color:black ">
 										<h2 class="major" style="color:black ">Tools Used</h2>
 										<ul class="alt">
-											<li>All data clean, preprocessing and analysis was done using <b style="color:black ">Python</b>.</li>
+											<li>All data cleaning, preprocessing and analysis was done using <b style="color:black ">Python</b>.</li>
 											<li>The data visualizations were created using <b style="color:black ">Python and Javascript</b> namely the D3.js and AmChart libraries</li>
 											<li>This website was coded in <b style="color:black ">HTML, CSS, and Javascript</b></li>
 										</ul>
@@ -115,9 +127,15 @@
 								<div class="inner columns aligned" style="background-color:#D6DBDF;color:black">
 									
 									
-									<div class="span-4" style="background-color:#EAECEE;color:black ">
-										<h2 class="major" style="background-color:#EAECEE;color:black ">The Data</h2>
-										
+									<div class="span-4" style="color:black ">
+										<h2 class="major" style="color:black ">The Data</h2>
+										<p style="color:black "><b style="color:black ">3 datasets were used for this rpoject</b></p>
+										<ul class="alt">
+											<li>1. <a href="https://ucdp.uu.se/downloads/">UCDP/PRIO Armed Conflict Dataset</a>: "dataset with information on armed conflict where at least one party is the government of a state in the time period 1946-2022" </li>
+											<li>2. <a href="https://www.prio.org/data/1#:~:text=A%20dataset%20on%20battle%20deaths,for%20the%20period%201946%E2%80%932008.">PRIO Battledeaths Dataset</a>: "A dataset on battle deaths (number of soldiers and civilians killed in combat) in state-based armed conflicts for the period 1946–2008"</li>
+											<li>3. <a href="https://ucdp.uu.se/downloads/">UUCDP Battle-Related Deaths Dataset</a>: "dataset with information on the number of battle-related deaths in the conflicts from 1989-2021"</li>
+										</ul>
+										<P>I merged datasets #2 and #3 to obtain fatality data. All analyses on factors other than death were performed using dataset #1.  </P>
 										
 									</div>
 									
@@ -144,6 +162,74 @@
 									<div class="span-2-75">
 										<h3 style="color:black" div="dark_text">Average Length of Conflict from 1946 to 2022</h3>
 										<h5 style="color:black"><i>hover over columns to show values</i></h5>
+										<p style="color:black;text-emphasis: 600">Process</p>
+										<p style="color:black">I also parsed through the data in Python to generate a trendline. The bar graph was created using JavaScript (specifially amChart library)</p>
+										<p style="color:black">Findings</p>
+										<p style="color:black">One of Lord Weas "shorten the length of campaigns" We can see from this tbale that conflict has actually gotten longer. In fact, it appears to be quite steadily increasing.</p>
+
+									</div>
+									
+							</div>
+						</section>
+						
+						<section class="panel color5-alt" style="background-color:#2C3E50">
+								<div class="intro " style="background-color:#2C3E50">
+									<h2 class="major">Instensity of conflict</h2>
+									 <p>Wars may have increased in duration since 1946 but <b>have they become more intense?</b></p>
+								</div>
+						</section>
+						
+						<section class="panel color5-alt" style="background-color:#D6DBDF;color:black">
+								<div class="inner columns aligned" style="background-color:#D6DBDF;color:black">
+									
+									<div class="span-2-75" style="background-color:#D6DBDF;color:black">
+										<h3 style="color:black">Note</h3>
+										<p style="color:black"><b style="color:black">How "intensity" was measured according to the Uppsala Conflict Data Program:</b></p>
+										<blockquote style="color:black">The intensity variable denotes what level of fighting a state-based conflict or dyad reaches in each specific calendar year. The variable has two categories:
+											<br>Minor: At least 25 but less than 1000 battle-related deaths in one calendar year.
+											<br>War: At least 1000 battle-related deaths in one calendar year.</blockquote>
+										
+
+									</div>
+									
+							</div>
+						</section>
+					   
+
+						<!-- Panel (Spotlight) -->
+							<section class="panel spotlight medium right span-5-75" >
+								<div id="int_stacked_chartdiv"></div>
+ 
+							</section>
+						
+						 <section class="panel color5-alt">
+								
+								<div class="inner columns aligned">
+									
+									<div class="span-2-75">
+										<h3 style="color:black" div="dark_text">Average Length of Conflict from 1946 to 2022</h3>
+										<h5 style="color:black"><i>hover over columns to show values</i></h5>
+										<p style="color:black">Process</p>
+										<p style="color:black">Findings</p>
+										<p style="color:black">We can see from this tbale that conflict has actually gotten longer. </p>
+
+									</div>
+									
+							</div>
+						</section>
+						
+						<section class="panel spotlight medium right span-5-75" >
+								<div id="int_stacked_chartdiv2"></div>
+ 
+							</section>
+						
+						 <section class="panel color5-alt">
+								
+								<div class="inner columns aligned">
+									
+									<div class="span-2-75">
+										<h3 style="color:black" div="dark_text">Average Length of Conflict from 1946 to 2022</h3>
+										<h5 style="color:black"><i>hover over columns to show values</i></h5>
 										<p style="color:black">Process</p>
 										<p style="color:black">Findings</p>
 										<p style="color:black">We can see from this tbale that conflict has actually gotten longer. </p>
@@ -156,14 +242,14 @@
 						<section class="panel color5-alt" style="background-color:#2C3E50">
 								<div class="intro " style="background-color:#2C3E50">
 									<h2 class="major"># of Deaths</h2>
-									 <p>The first question I will be looking at is: <b>how has number of deaths in conflict changed from 1946 to 2022?</b></p>
+									 <p>While war has may have become less intense over time, has the overall battle death count gone down? <b>How has number of deaths in conflict changed from 1946 to 2022?</b></p>
 								</div>
 						</section>
 					   
 
 						<!-- Panel (Spotlight) -->
-							<section class="panel spotlight medium right span-5-75" id="first">
-								<div id="chart"></div>
+							<section class="panel spotlight small right span-1-75">
+								<img src="bd.png">
 							</section>
 						
 						 <section class="panel color5-alt">
@@ -171,16 +257,122 @@
 								<div class="inner columns aligned">
 									
 									<div class="span-2-75">
-										<h3 style="color:black" div="dark_text">Average Length of Conflict from 1946 to 2022</h3>
+										<h3 style="color:black" div="dark_text"># of Battle Deaths Every Year from 1946 to 2021</h3>
 										<h5 style="color:black"><i>hover over columns to show values</i></h5>
 										
-										<p style="color:black">We can see from this tbale that conflict has actually gotten longer. </p>
+										
 
 									</div>
 									
 							</div>
 						</section>
+						
+						<section class="panel color5-alt" style="background-color:#2C3E50">
+								<div class="intro " style="background-color:#2C3E50">
+									<h2 class="major">Frequency of Conflict</h2>
+									 <p>Conflict has clearly become less deably but <b>has conflict become less frequent?</b></p>
+								</div>
+						</section>
+					   
 
+						<!-- Panel (Spotlight) -->
+							<section class="panel spotlight medium right span-5-75" id="first">
+								<img src="numconflicts.png" width="100%">
+							</section>
+						
+						 <section class="panel color5-alt">
+								
+								<div class="inner columns aligned">
+									
+									<div class="span-2-75">
+										<h3 style="color:black" div="dark_text"># of Conflics Started Every Year from 1946 to 2021</h3>
+										
+										
+										
+
+									</div>
+									
+							</div>
+						</section>
+						
+<!--
+						<section class="panel" style="background-color:#D6DBDF;color:black" >
+								<div class="inner columns aligned" style="background-color:#D6DBDF;color:black">
+									
+									
+									<div class="span-6" style="color:black ">
+										<h2 class="major" style="color:black ">So far, so good</h2>
+										<p>Lord Wolseley and Sven Lindqvist have alternate opinions on modern wars. Lord Wolseley believes more destructive modern wars not only act as a deterrent but also result in fewer deaths and shorten the length of the conflict. Lindqvist opposes the notion that modern wars are “low-intensity conflicts” and condones them for being primarily waged in less developed nations.</p>
+										<p>n light of these alternative opinions, my research objective is to analyze trends in conflicts to see if there have been changes from the end of WWII to now.</p>
+										<p>Specifically, I will be looking at the following factors:</p>
+										<div class="span-1-25">
+										<ul>
+											<li>Length of conflict</li>
+											<li>Intensity of conflict</li>
+											<li># of deaths</li>
+											<li>Frequency of conflict</li>
+											<li>Location trends</li>
+										</ul>
+
+
+									</div>
+									</div>
+									
+								</div>
+							</section>
+-->
+						
+						<section class="panel color5-alt" style="background-color:#2C3E50">
+								<div class="intro " style="background-color:#2C3E50">
+									<h2 class="major">Frequency of Conflict by Region</h2>
+									 <p>While the global frequency of conflict may have decreased <b>Is this true for every region?</b></p>
+								</div>
+						</section>
+					   
+
+						<!-- Panel (Spotlight) -->
+							<section class="panel color5-alt">
+								
+									
+									<div class="span-8-75">
+										<div class="inner columns aligned">
+										<div style="margin:8%" id="my_dataviz"></div>
+											
+											</div>
+
+								
+									
+							</div>
+							</section>
+						
+<!--
+						 <section class="panel color15-alt">
+								<div id="my_dataviz"></div>
+								<div class="inner columns aligned">
+									
+									<div class="span-8-75">
+										<div id="my_dataviz"></div>
+
+									</div>
+									
+							</div>
+						</section>
+-->
+						
+						 <section class="panel color5-alt">
+								
+								<div class="inner columns aligned">
+									
+									<div class="span-2-75">
+										<h3 style="color:black" div="dark_text"># of Conflics Started Each Year by Region</h3>
+										
+										
+										
+
+									</div>
+									
+							</div>
+						</section>
 						
 
 						<!-- Copyright -->
@@ -363,7 +555,7 @@
 		
 		<script>
     // Load CSV data
-    d3.csv("/aggregated_deaths_by_year.csv").then(function(data) {
+    d3.csv("aggregated_deaths_by_year.csv").then(function(data) {
         // Process and plot the data
         data.forEach(function(d) {
             d.Year = +d.Year; // Convert Year to numeric
@@ -389,10 +581,8 @@
           .range([0, width]);
         svg.append("g")
           .attr("transform", `translate(0,${height})`)
-          .call(d3.axisBottom(x).tickFormat(d3.format("d"))) // Remove commas from x-axis labels
-          .selectAll("path,line,text")
-          .attr("stroke", "black")
-          .attr("fill", "black");
+          .call(d3.axisBottom(x).tickFormat(d3.format("d")))
+          .attr("color", "black"); // Set tick color to black
 
         // Add Y axis
         const y = d3.scaleLinear()
@@ -400,9 +590,7 @@
           .range([height, 0]);
         svg.append("g")
           .call(d3.axisLeft(y))
-          .selectAll("path,line,text")
-          .attr("stroke", "black")
-          .attr("fill", "black");
+          .attr("color", "black"); // Set tick color to black
 
         // Add the line
         svg.append("path")
@@ -414,7 +602,343 @@
             .x(function(d) { return x(d.Year) })
             .y(function(d) { return y(d.Deaths) })
           );
+		
+		// Add X axis label
+        svg.append("text")
+          .attr("text-anchor", "middle")
+          .attr("x", width / 2)
+          .attr("y", height + margin.bottom - 10) // Adjusted for better positioning
+          .text("Year");
+
+        // Add Y axis label
+        svg.append("text")
+          .attr("text-anchor", "middle")
+          .attr("transform", "rotate(-90)")
+          .attr("y", -margin.left + 20)
+          .attr("x", -height / 2)
+          .text("Deaths");
     });
+</script>
+		
+<script>
+am5.ready(function() {
+    // Create root element
+    var root = am5.Root.new("int_stacked_chartdiv");
+
+    // Set themes
+    root.setThemes([am5themes_Animated.new(root)]);
+	
+	root.numberFormatter.setAll({
+		  numberFormat: "####",
+		  numericFields: ["valueX"]
+		});
+
+    // Create chart
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+        panX: true,
+        panY: true,
+        wheelX: "panX",
+        wheelY: "zoomX",
+        layout: root.verticalLayout,
+        pinchZoomX:true
+    }));
+
+    // Add cursor
+    var cursor = chart.set("cursor", am5xy.XYCursor.new(root, { behavior: "none" }));
+    cursor.lineY.set("visible", false);
+
+    // The data
+    // The data
+var data = [{"year": 1946, "Minor": 10, "War": 7}, {"year": 1947, "Minor": 4, "War": 10}, {"year": 1948, "Minor": 7, "War": 13}, {"year": 1949, "Minor": 13, "War": 8}, {"year": 1950, "Minor": 10, "War": 8}, {"year": 1951, "Minor": 8, "War": 6}, {"year": 1952, "Minor": 9, "War": 5}, {"year": 1953, "Minor": 9, "War": 7}, {"year": 1954, "Minor": 11, "War": 4}, {"year": 1955, "Minor": 9, "War": 4}, {"year": 1956, "Minor": 11, "War": 6}, {"year": 1957, "Minor": 15, "War": 2}, {"year": 1958, "Minor": 12, "War": 6}, {"year": 1959, "Minor": 11, "War": 5}, {"year": 1960, "Minor": 11, "War": 4}, {"year": 1961, "Minor": 12, "War": 9}, {"year": 1962, "Minor": 13, "War": 7}, {"year": 1963, "Minor": 13, "War": 7}, {"year": 1964, "Minor": 18, "War": 7}, {"year": 1965, "Minor": 19, "War": 8}, {"year": 1966, "Minor": 21, "War": 7}, {"year": 1967, "Minor": 22, "War": 11}, {"year": 1968, "Minor": 19, "War": 7}, {"year": 1969, "Minor": 20, "War": 9}, {"year": 1970, "Minor": 18, "War": 8}, {"year": 1971, "Minor": 19, "War": 10}, {"year": 1972, "Minor": 20, "War": 6}, {"year": 1973, "Minor": 19, "War": 7}, {"year": 1974, "Minor": 22, "War": 6}, {"year": 1975, "Minor": 23, "War": 7}, {"year": 1976, "Minor": 24, "War": 8}, {"year": 1977, "Minor": 28, "War": 8}, {"year": 1978, "Minor": 24, "War": 14}, {"year": 1979, "Minor": 31, "War": 10}, {"year": 1980, "Minor": 32, "War": 9}, {"year": 1981, "Minor": 29, "War": 13}, {"year": 1982, "Minor": 29, "War": 15}, {"year": 1983, "Minor": 29, "War": 14}, {"year": 1984, "Minor": 27, "War": 15}, {"year": 1985, "Minor": 25, "War": 13}, {"year": 1986, "Minor": 32, "War": 12}, {"year": 1987, "Minor": 32, "War": 15}, {"year": 1988, "Minor": 23, "War": 16}, {"year": 1989, "Minor": 31, "War": 10}, {"year": 1990, "Minor": 35, "War": 14}, {"year": 1991, "Minor": 40, "War": 13}, {"year": 1992, "Minor": 37, "War": 14}, {"year": 1993, "Minor": 35, "War": 9}, {"year": 1994, "Minor": 40, "War": 10}, {"year": 1995, "Minor": 32, "War": 9}, {"year": 1996, "Minor": 31, "War": 10}, {"year": 1997, "Minor": 31, "War": 8}, {"year": 1998, "Minor": 28, "War": 12}, {"year": 1999, "Minor": 28, "War": 12}, {"year": 2000, "Minor": 27, "War": 12}, {"year": 2001, "Minor": 30, "War": 9}, {"year": 2002, "Minor": 26, "War": 7}, {"year": 2003, "Minor": 27, "War": 6}, {"year": 2004, "Minor": 26, "War": 7}, {"year": 2005, "Minor": 28, "War": 5}, {"year": 2006, "Minor": 28, "War": 5}, {"year": 2007, "Minor": 31, "War": 4}, {"year": 2008, "Minor": 33, "War": 5}, {"year": 2009, "Minor": 31, "War": 6}, {"year": 2010, "Minor": 27, "War": 4}, {"year": 2011, "Minor": 30, "War": 7}, {"year": 2012, "Minor": 27, "War": 6}, {"year": 2013, "Minor": 32, "War": 7}, {"year": 2014, "Minor": 33, "War": 13}, {"year": 2015, "Minor": 43, "War": 11}, {"year": 2016, "Minor": 42, "War": 12}, {"year": 2017, "Minor": 42, "War": 10}, {"year": 2018, "Minor": 45, "War": 6}, {"year": 2019, "Minor": 49, "War": 7}, {"year": 2020, "Minor": 48, "War": 8}, {"year": 2021, "Minor": 49, "War": 5}, {"year": 2022, "Minor": 47, "War": 8}];
+
+    // Create axes
+    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+        categoryField: "year",
+        startLocation: 0.5,
+        endLocation: 0.5,
+        renderer: am5xy.AxisRendererX.new(root, {
+            minorGridEnabled: true,
+            minGridDistance: 80
+        }),
+        numberFormat: "####",
+        tooltip: am5.Tooltip.new(root, {})
+    }));
+    xAxis.data.setAll(data);
+
+    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+        min: 0,
+        max: 100,
+        calculateTotals: true,
+        numberFormat: "#'%'",
+        renderer: am5xy.AxisRendererY.new(root, { pan:"zoom" })
+    }));
+
+    // Add series
+    function createSeries(name, field, color) {
+        var series = chart.series.push(am5xy.LineSeries.new(root, {
+            name: name,
+            stacked: true,
+            xAxis: xAxis,
+            yAxis: yAxis,
+            valueYField: field,
+            categoryXField: "year",
+            valueYShow: "valueYTotalPercent",
+            stroke: am5.color(color), // Color of the series line
+            tooltip: am5.Tooltip.new(root, {
+                pointerOrientation: "horizontal",
+                labelText: "[bold]{name}[/]\n{categoryX}: {valueYTotalPercent.formatNumber('#.0')}% ({valueY})"
+            })
+        }));
+
+        series.fills.template.setAll({
+            fill: am5.color(color), // Color of the series fill
+            fillOpacity: 0.5,
+            visible: true
+        });
+
+        series.data.setAll(data);
+        series.appear(1000);
+		
+		series.set("fill", am5.color(color));
+    }
+
+    // Create your series with specific colors
+    createSeries("Minor", "Minor", "#67b7dc"); // Blue color for "Minor"
+    createSeries("War", "War", "#00ff00"); // Yellow color for "War"
+
+    // Add scrollbar
+    chart.set("scrollbarX", am5.Scrollbar.new(root, { orientation: "horizontal" }));
+
+    // Add legend
+    var legend = chart.children.push(am5.Legend.new(root, {
+        centerX: am5.p50,
+        x: am5.p50
+    }));
+    legend.data.setAll(chart.series.values);
+
+    // Animate the chart
+    chart.appear(1000, 100);
+	
+}); // end am5.ready()
+</script>
+		
+		
+	<script>
+am5.ready(function() {
+
+// Create root element
+// https://www.amcharts.com/docs/v5/getting-started/#Root_element
+var root = am5.Root.new("int_stacked_chartdiv2");
+
+
+// Set themes
+// https://www.amcharts.com/docs/v5/concepts/themes/
+root.setThemes([
+  am5themes_Animated.new(root)
+]);
+
+root.numberFormatter.setAll({
+		  numberFormat: "####",
+		  numericFields: ["valueX"]
+		});
+
+// Create chart
+// https://www.amcharts.com/docs/v5/charts/xy-chart/
+var chart = root.container.children.push(am5xy.XYChart.new(root, {
+  panX: true,
+  panY: true,
+  wheelX: "panX",
+  wheelY: "zoomX",
+  pinchZoomX: true,
+  paddingLeft: 0
+}));
+
+
+// Add cursor
+// https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+  behavior: "none"
+}));
+cursor.lineY.set("visible", false);
+
+
+var data = [{"year": 1946, "Minor": 10, "War": 7}, {"year": 1947, "Minor": 4, "War": 10}, {"year": 1948, "Minor": 7, "War": 13}, {"year": 1949, "Minor": 13, "War": 8}, {"year": 1950, "Minor": 10, "War": 8}, {"year": 1951, "Minor": 8, "War": 6}, {"year": 1952, "Minor": 9, "War": 5}, {"year": 1953, "Minor": 9, "War": 7}, {"year": 1954, "Minor": 11, "War": 4}, {"year": 1955, "Minor": 9, "War": 4}, {"year": 1956, "Minor": 11, "War": 6}, {"year": 1957, "Minor": 15, "War": 2}, {"year": 1958, "Minor": 12, "War": 6}, {"year": 1959, "Minor": 11, "War": 5}, {"year": 1960, "Minor": 11, "War": 4}, {"year": 1961, "Minor": 12, "War": 9}, {"year": 1962, "Minor": 13, "War": 7}, {"year": 1963, "Minor": 13, "War": 7}, {"year": 1964, "Minor": 18, "War": 7}, {"year": 1965, "Minor": 19, "War": 8}, {"year": 1966, "Minor": 21, "War": 7}, {"year": 1967, "Minor": 22, "War": 11}, {"year": 1968, "Minor": 19, "War": 7}, {"year": 1969, "Minor": 20, "War": 9}, {"year": 1970, "Minor": 18, "War": 8}, {"year": 1971, "Minor": 19, "War": 10}, {"year": 1972, "Minor": 20, "War": 6}, {"year": 1973, "Minor": 19, "War": 7}, {"year": 1974, "Minor": 22, "War": 6}, {"year": 1975, "Minor": 23, "War": 7}, {"year": 1976, "Minor": 24, "War": 8}, {"year": 1977, "Minor": 28, "War": 8}, {"year": 1978, "Minor": 24, "War": 14}, {"year": 1979, "Minor": 31, "War": 10}, {"year": 1980, "Minor": 32, "War": 9}, {"year": 1981, "Minor": 29, "War": 13}, {"year": 1982, "Minor": 29, "War": 15}, {"year": 1983, "Minor": 29, "War": 14}, {"year": 1984, "Minor": 27, "War": 15}, {"year": 1985, "Minor": 25, "War": 13}, {"year": 1986, "Minor": 32, "War": 12}, {"year": 1987, "Minor": 32, "War": 15}, {"year": 1988, "Minor": 23, "War": 16}, {"year": 1989, "Minor": 31, "War": 10}, {"year": 1990, "Minor": 35, "War": 14}, {"year": 1991, "Minor": 40, "War": 13}, {"year": 1992, "Minor": 37, "War": 14}, {"year": 1993, "Minor": 35, "War": 9}, {"year": 1994, "Minor": 40, "War": 10}, {"year": 1995, "Minor": 32, "War": 9}, {"year": 1996, "Minor": 31, "War": 10}, {"year": 1997, "Minor": 31, "War": 8}, {"year": 1998, "Minor": 28, "War": 12}, {"year": 1999, "Minor": 28, "War": 12}, {"year": 2000, "Minor": 27, "War": 12}, {"year": 2001, "Minor": 30, "War": 9}, {"year": 2002, "Minor": 26, "War": 7}, {"year": 2003, "Minor": 27, "War": 6}, {"year": 2004, "Minor": 26, "War": 7}, {"year": 2005, "Minor": 28, "War": 5}, {"year": 2006, "Minor": 28, "War": 5}, {"year": 2007, "Minor": 31, "War": 4}, {"year": 2008, "Minor": 33, "War": 5}, {"year": 2009, "Minor": 31, "War": 6}, {"year": 2010, "Minor": 27, "War": 4}, {"year": 2011, "Minor": 30, "War": 7}, {"year": 2012, "Minor": 27, "War": 6}, {"year": 2013, "Minor": 32, "War": 7}, {"year": 2014, "Minor": 33, "War": 13}, {"year": 2015, "Minor": 43, "War": 11}, {"year": 2016, "Minor": 42, "War": 12}, {"year": 2017, "Minor": 42, "War": 10}, {"year": 2018, "Minor": 45, "War": 6}, {"year": 2019, "Minor": 49, "War": 7}, {"year": 2020, "Minor": 48, "War": 8}, {"year": 2021, "Minor": 49, "War": 5}, {"year": 2022, "Minor": 47, "War": 8}];
+
+
+// Create axes
+// https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+  categoryField: "year",
+  startLocation: 0.5,
+  endLocation: 0.5,
+  renderer: am5xy.AxisRendererX.new(root, {
+    minorGridEnabled: true,
+    minGridDistance: 70
+  }),
+  tooltip: am5.Tooltip.new(root, {})
+}));
+
+xAxis.data.setAll(data);
+
+var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+  renderer: am5xy.AxisRendererY.new(root, {
+    pan: "zoom"
+  })
+}));
+
+// Add series
+// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+
+function createSeries(name, field) {
+  var series = chart.series.push(am5xy.LineSeries.new(root, {
+    name: name,
+    xAxis: xAxis,
+    yAxis: yAxis,
+    stacked: true,
+    valueYField: field,
+    categoryXField: "year",
+    tooltip: am5.Tooltip.new(root, {
+      pointerOrientation: "horizontal",
+      labelText: "[bold]{name}[/]\n{categoryX}: {valueY}"
+    })
+  }));
+
+  series.fills.template.setAll({
+    fillOpacity: 0.5,
+    visible: true
+  });
+
+  series.data.setAll(data);
+  series.appear(1000);
+}
+
+createSeries("Minor", "Minor");
+createSeries("War", "War");
+
+
+// Add scrollbar
+// https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
+chart.set("scrollbarX", am5.Scrollbar.new(root, {
+  orientation: "horizontal"
+}));
+
+// Create axis ranges
+// https://www.amcharts.com/docs/v5/charts/xy-chart/axes/axis-ranges/
+var rangeDataItem = xAxis.makeDataItem({
+  category: "1946",
+  endCategory: "2021"
+});
+
+var range = xAxis.createAxisRange(rangeDataItem);
+
+rangeDataItem.get("grid").setAll({
+  stroke: am5.color(0x00ff33),
+  strokeOpacity: 0.5,
+  strokeDasharray: [3]
+});
+
+rangeDataItem.get("axisFill").setAll({
+  fill: am5.color(0x00ff33),
+  fillOpacity: 0.1,
+  visible: true
+});
+
+rangeDataItem.get("label").setAll({
+  inside: true,
+  text: "Fines for speeding increased",
+  rotation: 90,
+  centerX: am5.p100,
+  centerY: am5.p100,
+  location: 0,
+  paddingBottom: 10,
+  paddingRight: 15
+});
+
+
+// Make stuff animate on load
+// https://www.amcharts.com/docs/v5/concepts/animations/
+chart.appear(1000, 100);
+
+}); // end am5.ready()
+</script>
+		
+		
+<script src="https://d3js.org/d3.v4.js"></script>
+		
+	<script>
+
+// set the dimensions and margins of the graph
+var margin = {top: 30, right: 0, bottom: 30, left: 50},
+    width = 210 - margin.left - margin.right,
+    height = 210 - margin.top - margin.bottom;
+
+//Read the data
+d3.csv("conflict_count.csv", function(data) {
+
+  // group the data: I want to draw one line per group
+  var sumstat = d3.nest() // nest function allows to group the calculation per level of a factor
+    .key(function(d) { return d.continent;})
+    .entries(data);
+
+  // What is the list of groups?
+  allKeys = sumstat.map(function(d){return d.key})
+
+  // Add an svg element for each group. The will be one beside each other and will go on the next row when no more room available
+  var svg = d3.select("#my_dataviz")
+    .selectAll("uniqueChart")
+    .data(sumstat)
+    .enter()
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+  // Add X axis --> it is a date format
+  var x = d3.scaleLinear()
+    .domain(d3.extent(data, function(d) { return d.year; }))
+    .range([ 0, width ]);
+  svg
+    .append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x).ticks(3));
+
+  //Add Y axis
+  var y = d3.scaleLinear()
+    .domain([0, d3.max(data, function(d) { return +d.conflicts; })])
+    .range([ height, 0 ]);
+  svg.append("g")
+    .call(d3.axisLeft(y).ticks(5));
+
+  // color palette
+  var color = d3.scaleOrdinal()
+    .domain(allKeys)
+    .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33'])
+
+  // Draw the line
+  svg
+    .append("path")
+      .attr("fill", "none")
+      .attr("stroke", function(d){ return color(d.key) })
+      .attr("stroke-width", 1.9)
+      .attr("d", function(d){
+        return d3.line()
+          .x(function(d) { return x(d.year); })
+          .y(function(d) { return y(+d.conflicts); })
+          (d.values)
+      })
+
+  // Add titles
+  svg
+    .append("text")
+    .attr("text-anchor", "start")
+    .attr("y", -5)
+    .attr("x", 0)
+    .text(function(d){ return(d.key)})
+    .style("fill", function(d){ return color(d.key) })
+
+})
 </script>
 
 	</body>
