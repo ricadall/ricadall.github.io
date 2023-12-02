@@ -1,0 +1,364 @@
+year,continent,conflicts
+1946,Americas,1
+1946,Asia,6
+1946,Europe,6
+1946,Middle East,3
+1947,Africa,1
+1947,Americas,1
+1947,Asia,8
+1947,Europe,4
+1948,Americas,1
+1948,Asia,13
+1948,Europe,4
+1948,Middle East,2
+1949,Americas,2
+1949,Asia,15
+1949,Europe,2
+1949,Middle East,2
+1950,Americas,1
+1950,Asia,15
+1950,Europe,1
+1950,Middle East,1
+1951,Asia,12
+1951,Middle East,1
+1952,Africa,1
+1952,Americas,1
+1952,Asia,10
+1952,Middle East,1
+1953,Africa,3
+1953,Americas,1
+1953,Asia,11
+1953,Middle East,1
+1954,Africa,4
+1954,Americas,2
+1954,Asia,8
+1954,Middle East,1
+1955,Africa,4
+1955,Americas,1
+1955,Asia,6
+1955,Europe,1
+1955,Middle East,1
+1956,Africa,4
+1956,Americas,1
+1956,Asia,8
+1956,Europe,2
+1956,Middle East,1
+1957,Africa,4
+1957,Americas,2
+1957,Asia,8
+1957,Europe,1
+1957,Middle East,2
+1958,Africa,4
+1958,Americas,1
+1958,Asia,9
+1958,Europe,1
+1958,Middle East,3
+1959,Africa,2
+1959,Asia,11
+1959,Europe,1
+1959,Middle East,2
+1960,Africa,4
+1960,Asia,10
+1960,Middle East,1
+1961,Africa,5
+1961,Americas,1
+1961,Asia,11
+1961,Europe,1
+1961,Middle East,2
+1962,Africa,4
+1962,Americas,1
+1962,Asia,10
+1962,Europe,1
+1962,Middle East,3
+1963,Africa,4
+1963,Americas,2
+1963,Asia,10
+1963,Middle East,4
+1964,Africa,9
+1964,Americas,1
+1964,Asia,11
+1964,Middle East,4
+1965,Africa,7
+1965,Americas,4
+1965,Asia,12
+1965,Middle East,4
+1966,Africa,9
+1966,Americas,2
+1966,Asia,11
+1966,Middle East,6
+1967,Africa,10
+1967,Americas,3
+1967,Asia,12
+1967,Middle East,8
+1968,Africa,9
+1968,Americas,2
+1968,Asia,11
+1968,Middle East,4
+1969,Africa,8
+1969,Americas,3
+1969,Asia,12
+1969,Middle East,5
+1970,Africa,8
+1970,Americas,2
+1970,Asia,11
+1970,Middle East,5
+1971,Africa,11
+1971,Americas,2
+1971,Asia,13
+1971,Europe,1
+1971,Middle East,2
+1972,Africa,8
+1972,Americas,4
+1972,Asia,10
+1972,Europe,1
+1972,Middle East,3
+1973,Africa,6
+1973,Americas,3
+1973,Asia,11
+1973,Europe,1
+1973,Middle East,5
+1974,Africa,6
+1974,Americas,3
+1974,Asia,13
+1974,Europe,1
+1974,Middle East,4
+1975,Africa,7
+1975,Americas,3
+1975,Asia,15
+1975,Europe,1
+1975,Middle East,4
+1976,Africa,11
+1976,Americas,3
+1976,Asia,14
+1976,Europe,1
+1976,Middle East,3
+1977,Africa,14
+1977,Americas,4
+1977,Asia,15
+1977,Europe,1
+1977,Middle East,2
+1978,Africa,15
+1978,Americas,3
+1978,Asia,16
+1978,Europe,2
+1978,Middle East,2
+1979,Africa,11
+1979,Americas,4
+1979,Asia,14
+1979,Europe,2
+1979,Middle East,9
+1980,Africa,14
+1980,Americas,3
+1980,Asia,14
+1980,Europe,2
+1980,Middle East,8
+1981,Africa,14
+1981,Americas,3
+1981,Asia,16
+1981,Europe,2
+1981,Middle East,7
+1982,Africa,12
+1982,Americas,6
+1982,Asia,14
+1982,Europe,2
+1982,Middle East,9
+1983,Africa,16
+1983,Americas,6
+1983,Asia,14
+1983,Europe,1
+1983,Middle East,6
+1984,Africa,12
+1984,Americas,5
+1984,Asia,17
+1984,Europe,1
+1984,Middle East,7
+1985,Africa,11
+1985,Americas,5
+1985,Asia,14
+1985,Europe,2
+1985,Middle East,6
+1986,Africa,13
+1986,Americas,5
+1986,Asia,16
+1986,Europe,2
+1986,Middle East,8
+1987,Africa,14
+1987,Americas,6
+1987,Asia,18
+1987,Europe,2
+1987,Middle East,7
+1988,Africa,11
+1988,Americas,5
+1988,Asia,16
+1988,Europe,1
+1988,Middle East,6
+1989,Africa,13
+1989,Americas,9
+1989,Asia,13
+1989,Europe,2
+1989,Middle East,4
+1990,Africa,13
+1990,Americas,6
+1990,Asia,20
+1990,Europe,3
+1990,Middle East,7
+1991,Africa,18
+1991,Americas,5
+1991,Asia,15
+1991,Europe,7
+1991,Middle East,8
+1992,Africa,15
+1992,Americas,4
+1992,Asia,17
+1992,Europe,9
+1992,Middle East,6
+1993,Africa,11
+1993,Americas,3
+1993,Asia,13
+1993,Europe,9
+1993,Middle East,8
+1994,Africa,15
+1994,Americas,4
+1994,Asia,19
+1994,Europe,6
+1994,Middle East,6
+1995,Africa,11
+1995,Americas,4
+1995,Asia,15
+1995,Europe,5
+1995,Middle East,6
+1996,Africa,12
+1996,Americas,3
+1996,Asia,18
+1996,Europe,1
+1996,Middle East,7
+1997,Africa,14
+1997,Americas,2
+1997,Asia,18
+1997,Europe,1
+1997,Middle East,4
+1998,Africa,17
+1998,Americas,2
+1998,Asia,15
+1998,Europe,3
+1998,Middle East,3
+1999,Africa,16
+1999,Americas,2
+1999,Asia,16
+1999,Europe,3
+1999,Middle East,3
+2000,Africa,15
+2000,Americas,1
+2000,Asia,18
+2000,Europe,1
+2000,Middle East,4
+2001,Africa,16
+2001,Americas,2
+2001,Asia,15
+2001,Europe,2
+2001,Middle East,3
+2002,Africa,15
+2002,Americas,2
+2002,Asia,13
+2002,Europe,1
+2002,Middle East,2
+2003,Africa,12
+2003,Americas,2
+2003,Asia,15
+2003,Europe,1
+2003,Middle East,2
+2004,Africa,10
+2004,Americas,3
+2004,Asia,15
+2004,Europe,2
+2004,Middle East,3
+2005,Africa,8
+2005,Americas,2
+2005,Asia,16
+2005,Europe,2
+2005,Middle East,5
+2006,Africa,10
+2006,Americas,2
+2006,Asia,15
+2006,Europe,1
+2006,Middle East,5
+2007,Africa,12
+2007,Americas,3
+2007,Asia,14
+2007,Europe,2
+2007,Middle East,4
+2008,Africa,13
+2008,Americas,3
+2008,Asia,15
+2008,Europe,3
+2008,Middle East,4
+2009,Africa,13
+2009,Americas,3
+2009,Asia,15
+2009,Europe,1
+2009,Middle East,5
+2010,Africa,10
+2010,Americas,3
+2010,Asia,12
+2010,Europe,1
+2010,Middle East,5
+2011,Africa,15
+2011,Americas,2
+2011,Asia,13
+2011,Europe,1
+2011,Middle East,6
+2012,Africa,13
+2012,Americas,2
+2012,Asia,10
+2012,Europe,2
+2012,Middle East,6
+2013,Africa,15
+2013,Americas,2
+2013,Asia,15
+2013,Europe,1
+2013,Middle East,6
+2014,Africa,16
+2014,Americas,2
+2014,Asia,14
+2014,Europe,6
+2014,Middle East,8
+2015,Africa,23
+2015,Americas,2
+2015,Asia,15
+2015,Europe,4
+2015,Middle East,10
+2016,Africa,22
+2016,Americas,2
+2016,Asia,16
+2016,Europe,3
+2016,Middle East,11
+2017,Africa,20
+2017,Americas,1
+2017,Asia,17
+2017,Europe,3
+2017,Middle East,11
+2018,Africa,20
+2018,Americas,1
+2018,Asia,16
+2018,Europe,2
+2018,Middle East,12
+2019,Africa,27
+2019,Americas,2
+2019,Asia,15
+2019,Europe,2
+2019,Middle East,10
+2020,Africa,30
+2020,Americas,1
+2020,Asia,13
+2020,Europe,3
+2020,Middle East,9
+2021,Africa,25
+2021,Americas,1
+2021,Asia,17
+2021,Europe,2
+2021,Middle East,9
+2022,Africa,26
+2022,Americas,1
+2022,Asia,17
+2022,Europe,3
+2022,Middle East,8

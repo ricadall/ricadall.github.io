@@ -1,0 +1,138 @@
+<html>
+	<!-- Styles -->
+<style>
+#regbdchartdiv {
+  width: 100%;
+  height: 500px;
+}
+
+</style>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+var chart = am4core.create("regbdchartdiv", am4charts.XYChart);
+
+chart.data = [{'year': '1989', 'Europe': 287.0, 'Middle East': 1257.0, 'Asia': 9714.0, 'Africa': 34873.0, 'Americas': 8715.0}, {'year': '1990', 'Europe': 236.0, 'Middle East': 2480.0, 'Asia': 10065.0, 'Africa': 64839.0, 'Americas': 2610.0}, {'year': '1991', 'Europe': 3400.0, 'Middle East': 23767.0, 'Asia': 15508.0, 'Africa': 25480.0, 'Americas': 2183.0}, {'year': '1992', 'Europe': 24592.0, 'Middle East': 2134.0, 'Asia': 17039.0, 'Africa': 6887.0, 'Americas': 2726.0}, {'year': '1993', 'Europe': 16717.0, 'Middle East': 2868.0, 'Asia': 9385.0, 'Africa': 15064.0, 'Americas': 912.0}, {'year': '1994', 'Europe': 8758.0, 'Middle East': 5899.0, 'Asia': 12642.0, 'Africa': 9605.0, 'Americas': 1558.0}, {'year': '1995', 'Europe': 11479.0, 'Middle East': 4102.0, 'Asia': 12719.0, 'Africa': 6678.0, 'Americas': 1127.0}, {'year': '1996', 'Europe': 2721.0, 'Middle East': 4613.0, 'Asia': 12034.0, 'Africa': 7667.0, 'Americas': 1309.0}, {'year': '1997', 'Europe': 29.0, 'Middle East': 4839.0, 'Asia': 11493.0, 'Africa': 23582.0, 'Americas': 653.0}, {'year': '1998', 'Europe': 1298.0, 'Middle East': 2149.0, 'Asia': 12231.0, 'Africa': 23274.0, 'Americas': 964.0}, {'year': '1999', 'Europe': 7258.0, 'Middle East': 1469.0, 'Asia': 9244.0, 'Africa': 61206.0, 'Americas': 1449.0}, {'year': '2000', 'Europe': 2907.0, 'Middle East': 323.0, 'Asia': 13571.0, 'Africa': 59714.0, 'Americas': 1870.0}, {'year': '2001', 'Europe': 2260.0, 'Middle East': 495.0, 'Asia': 7855.0, 'Africa': 10595.0, 'Americas': 4844.0}, {'year': '2002', 'Europe': 1289.0, 'Middle East': 667.0, 'Asia': 7430.0, 'Africa': 7249.0, 'Americas': 4257.0}, {'year': '2003', 'Europe': 8407.0, 'Middle East': 8317.0, 'Asia': 13815.0, 'Africa': 6430.0, 'Americas': 9589.0}, {'year': '2004', 'Europe': 1178.0, 'Middle East': 4675.0, 'Asia': 5749.0, 'Africa': 5999.0, 'Americas': 1819.0}, {'year': '2005', 'Europe': 707.0, 'Middle East': 3052.0, 'Asia': 5294.0, 'Africa': 1588.0, 'Americas': 1497.0}, {'year': '2006', 'Europe': 259.0, 'Middle East': 5410.0, 'Asia': 9607.0, 'Africa': 3694.0, 'Americas': 748.0}, {'year': '2007', 'Europe': 176.0, 'Middle East': 3073.0, 'Asia': 12080.0, 'Africa': 3349.0, 'Americas': 534.0}, {'year': '2008', 'Europe': 1055.0, 'Middle East': 3489.0, 'Asia': 18906.0, 'Africa': 4653.0, 'Americas': 575.0}, {'year': '2009', 'Europe': 696.0, 'Middle East': 2106.0, 'Asia': 25281.0, 'Africa': 5600.0, 'Americas': 920.0}, {'year': '2010', 'Europe': 418.0, 'Middle East': 1620.0, 'Asia': 14302.0, 'Africa': 3971.0, 'Americas': 776.0}, {'year': '2011', 'Europe': 359.0, 'Middle East': 4119.0, 'Asia': 11765.0, 'Africa': 8422.0, 'Americas': 405.0}, {'year': '2012', 'Europe': 541.0, 'Middle East': 54470.0, 'Asia': 12065.0, 'Africa': 6520.0, 'Americas': 436.0}, {'year': '2013', 'Europe': 321.0, 'Middle East': 74489.0, 'Asia': 11293.0, 'Africa': 7201.0, 'Americas': 178.0}, {'year': '2014', 'Europe': 5106.0, 'Middle East': 83562.0, 'Asia': 16604.0, 'Africa': 10333.0, 'Americas': 257.0}, {'year': '2015', 'Europe': 1943.0, 'Middle East': 70044.0, 'Asia': 21119.0, 'Africa': 10281.0, 'Americas': 221.0}, {'year': '2016', 'Europe': 464.0, 'Middle East': 59512.0, 'Asia': 20060.0, 'Africa': 9925.0, 'Americas': 147.0}, {'year': '2017', 'Europe': 504.0, 'Middle East': 39270.0, 'Asia': 22545.0, 'Africa': 9425.0, 'Americas': 111.0}, {'year': '2018', 'Europe': 273.0, 'Middle East': 20276.0, 'Asia': 27308.0, 'Africa': 6838.0, 'Americas': 131.0}, {'year': '2019', 'Europe': 337.0, 'Middle East': 11861.0, 'Asia': 31686.0, 'Africa': 8391.0, 'Americas': 152.0}, {'year': '2020', 'Europe': 7872.0, 'Middle East': 12938.0, 'Asia': 21987.0, 'Africa': 11012.0, 'Americas': 28.0}, {'year': '2021', 'Europe': 248.0, 'Middle East': 26416.0, 'Asia': 37880.0, 'Africa': 19445.0, 'Americas': 113.0}, {'year': '2022', 'Europe': 81854.0, 'Middle East': 5056.0, 'Asia': 4298.0, 'Africa': 112726.0, 'Americas': 73.0}];
+
+chart.dateFormatter.inputDateFormat = "yyyy";
+var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+dateAxis.renderer.minGridDistance = 60;
+dateAxis.startLocation = 0.5;
+dateAxis.endLocation = 0.5;
+dateAxis.baseInterval = {
+  timeUnit: "year",
+  count: 1
+}
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.tooltip.disabled = true;
+
+var series = chart.series.push(new am4charts.LineSeries());
+series.dataFields.dateX = "year";
+series.name = "Americas";
+series.dataFields.valueY = "Americas";
+//series.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/car.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series.tooltipText = "[#000]{valueY.value}[/]";
+series.tooltipText = "[#000]Americas: {valueY.value}";
+series.tooltip.background.fill = am4core.color("#FFF");
+series.tooltip.getStrokeFromObject = true;
+series.tooltip.background.strokeWidth = 3;
+series.tooltip.getFillFromObject = false;
+series.fillOpacity = 0.6;
+series.strokeWidth = 2;
+series.stacked = true;
+
+var series2 = chart.series.push(new am4charts.LineSeries());
+series2.name = "Europe";
+series2.dataFields.dateX = "year";
+series2.dataFields.valueY = "Europe";
+//series2.tooltipHTML = "<img src='icons/europeicon.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series2.tooltipText = "[#000]{valueY.value}[/]";
+series2.tooltipText = "[#000]Europe: {valueY.value}";
+series2.tooltip.background.fill = am4core.color("#FFF");
+series2.tooltip.getFillFromObject = false;
+series2.tooltip.getStrokeFromObject = true;
+series2.tooltip.background.strokeWidth = 3;
+series2.sequencedInterpolation = true;
+series2.fillOpacity = 0.6;
+series2.stacked = true;
+series2.strokeWidth = 2;
+
+var series3 = chart.series.push(new am4charts.LineSeries());
+series3.name = "Middle East";
+series3.dataFields.dateX = "year";
+series3.dataFields.valueY = "Middle East";
+//series3.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/bicycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series3.tooltipText = "[#000]{valueY.value}[/]";
+series3.tooltipText = "[#000]Middle East: {valueY.value}";
+series3.tooltip.background.fill = am4core.color("#FFF");
+series3.tooltip.getFillFromObject = false;
+series3.tooltip.getStrokeFromObject = true;
+series3.tooltip.background.strokeWidth = 3;
+series3.sequencedInterpolation = true;
+series3.fillOpacity = 0.6;
+series3.defaultState.transitionDuration = 1000;
+series3.stacked = true;
+series3.strokeWidth = 2;
+	
+var series4 = chart.series.push(new am4charts.LineSeries());
+series4.name = "Asia";
+series4.dataFields.dateX = "year";
+series4.dataFields.valueY = "Asia";
+//series4.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/bicycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series4.tooltipText = "[#000]{valueY.value}[/]";
+series4.tooltipText = "[#000]Asia: {valueY.value}";
+series4.tooltip.background.fill = am4core.color("#FFF");
+series4.tooltip.getFillFromObject = false;
+series4.tooltip.getStrokeFromObject = true;
+series4.tooltip.background.strokeWidth = 3;
+series4.sequencedInterpolation = true;
+series4.fillOpacity = 0.6;
+series4.defaultState.transitionDuration = 1000;
+series4.stacked = true;
+series4.strokeWidth = 2;
+	
+var series5 = chart.series.push(new am4charts.LineSeries());
+series5.name = "Africa";
+series5.dataFields.dateX = "year";
+series5.dataFields.valueY = "Africa";
+//series5.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/bicycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+//series5.tooltipText = "[#000]{valueY.value}[/]";
+series5.tooltipText = "[#000]Africa: {valueY.value}";
+series5.tooltip.background.fill = am4core.color("#FFF");
+series5.tooltip.getFillFromObject = false;
+series5.tooltip.getStrokeFromObject = true;
+series5.tooltip.background.strokeWidth = 3;
+series5.sequencedInterpolation = true;
+series5.fillOpacity = 0.6;
+series5.defaultState.transitionDuration = 1000;
+series5.stacked = true;
+series5.strokeWidth = 2;
+
+chart.cursor = new am4charts.XYCursor();
+chart.cursor.xAxis = dateAxis;
+chart.scrollbarX = new am4core.Scrollbar();
+
+// Add a legend
+chart.legend = new am4charts.Legend();
+chart.legend.position = "top";
+
+
+
+}); // end am4core.ready()
+</script>
+
+<!-- HTML -->
+<div id="regbdchartdiv"></div>
+</html>
