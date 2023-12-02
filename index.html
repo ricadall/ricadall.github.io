@@ -193,7 +193,7 @@
 						<section class="panel color5-alt" style="background-color:#D6DBDF;color:black">
 								<div class="inner columns aligned" style="background-color:#D6DBDF;color:black">
 									
-									<div class="span-2-75" style="background-color:#D6DBDF;color:black">
+									<div class="span-2-75" style="background-color:#D6DBDF;color:black">cf
 										<h3 style="color:black">Note</h3>
 										<p style="color:black"><b style="color:black">How "intensity" was measured according to the Uppsala Conflict Data Program:</b></p>
 										<blockquote style="color:black">The intensity variable denotes what level of fighting a state-based conflict or dyad reaches in each specific calendar year. The variable has two categories:
@@ -223,6 +223,8 @@
 										<h5 style="color:black"><i>hover over columns to show values</i></h5>
 										<p style="color:black">Process</p>
 										<p style="color:black"> I calculated the proportional representation of each intensity level of conflict for each year. This involved aggregating and normalizing the data in Python before visualizing it with a stacked area chart using JavaScript's Highcharts library.</p>
+										<p style="color:black">Findings</p>
+										<p style="color:black">Findings</p>
 <!--
 										<p style="color:black">Findings</p>
 										<p style="color:black">We can see from this tbale that conflict has actually gotten longer. </p>
@@ -356,7 +358,8 @@
 									
 									<div class="span-8-75">
 										<div class="inner columns aligned">
-										<div id="regbdchartdiv"></div>
+<!--										<div id="regbdchartdiv"></div>-->
+											<div style="margin:9.5%" id="my_dataviz"></div>
 											
 											</div>
 
@@ -383,8 +386,8 @@
 						
 												<section class="panel color5-alt" style="background-color:#2C3E50">
 								<div class="intro " style="background-color:#2C3E50">
-									<h2 class="major">Frequency of Conflict by Region</h2>
-									 <p>While the global frequency of conflict may have decreased <b>Is this true for every region?</b></p>
+									<h2 class="major">Conflict Deaths by Region</h2>
+									 <p>While the global number of battle deaths may have decreased <b>Is this true for every region?</b></p>
 								</div>
 						</section>
 					   
@@ -393,9 +396,9 @@
 							<section class="panel color5-alt">
 								
 									
-									<div class="span-3-75">
+									<div class="span-5-75">
 										<div class="inner columns aligned">
-										<div style="margin:8%" id="cont_bd_chartdiv"></div>
+										<div id="regbdchartdiv"></div>
 											
 											</div>
 
@@ -413,12 +416,27 @@
 										<h3 style="color:black" div="dark_text"># of Battle Deaths each Year by Region</h3>
 										
 										<p style="color:black"> Process</p>
-										<p style="color:black"></p>
+										<p style="color:black">Using Python, I segmented the merged dataset by region and further segmented this results by year. I then calculated the sum of battle deaths for each segement. I visualized the result using line graph subplors with Javascript (specifically D3.js)</p>
 
 									</div>
 									
 							</div>
 						</section>
+						
+						<section class="panel" style="background-color:#D6DBDF;color:black" >
+								<div class="inner columns aligned" style="background-color:#D6DBDF;color:black">
+									
+									
+									<div class="span-7" style="color:black ">
+										<h2 class="major" style="color:black ">Conclusion</h2>
+										<p>Lord Wolseley asserted in 1899 that scientific advances in warfare would lead to nations hesitating before going to war, reduce casualties, and shorten conflicts, however, the data presents a contrasting reality. While there is evidence supporting a global decrease in battle deaths and a lower frequency of wars, consistent with Wolseley's optimism about the impact of scientific progress, the situation is markedly different in historically less developed regions. In areas like Africa and the Middle East, there has been a notable increase in conflict frequency, challenging the notion that scientific advancements universally deter warfare. Additionally, the increased length of wars contradicts Wolseley's prediction of shorter campaigns, indicating that modern conflicts, though less intense, are more enduring. While conflicts might be less intense, their duration has extended, potentially prolonging the sufferings of the inhabitants.</p>
+										<p>Conversely, Sven Lindqvist's observations of post-1945 conflicts are largely reflected in the data. The results of the analysis support his statement that the decrease in overall war intensity and the increase in protracted conflicts reflect a shift from large-scale, high-intensity warfare to these prolonged "low-intensity conflicts”. The data also reinforces Lindqvist’s observations that less developed nations often bear the brunt of these little wars,’; the analysis suggests an undeniable asymmetry in the distribution and impact of conflict by region These findings underscore a critical disconnect between the theoretical benefits of scientific progress in warfare and the on-ground realities, particularly in less developed regions.</p>
+										
+										
+									</div>
+									
+								</div>
+							</section>
 						
 
 						<!-- Copyright -->
