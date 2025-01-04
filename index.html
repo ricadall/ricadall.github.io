@@ -176,6 +176,60 @@ $(document)
     border: 1px solid rgba(34, 36, 38, .15);
     border-radius: .28571429rem;
     transition: box-shadow .1s ease, width .1s ease;
+		}
+
+			.dropbtn {
+  background-color: #f9f9f9;
+  color: #0f0f0f;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 98;
+  max-height: 0;
+  min-width: 160px;
+  transition: max-height 0.15s ease-out;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: black;
+  background-color: #f9f9f9;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #e2e2e2;
+}
+
+.dropdown:hover .dropdown-content {
+  max-height: 500px;
+  min-width: 160px;
+  transition: max-height 0.25s ease-in;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+  transition: max-height 0.25s ease-in;
+}
+
+	    
     </style>
 
 	</head>
@@ -210,6 +264,15 @@ $(document)
     <tr>
         <td class="custom-left-column">Variable</td>
         <td class="custom-right-column">
+
+					<div class="dropdown">
+  <button class="dropbtn" for="btnControl">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="https://ricadall.github.io/data-pop-total.html">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
 		
 		<a href="https://ricadall.github.io/data-pop-total.html">link text</a>
 		<select class="form-select" aria-label="Default select example" style="width:30%" id="dynamic-select">
