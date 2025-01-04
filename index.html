@@ -212,12 +212,22 @@ $(document)
         <td class="custom-right-column">
 		
 		
-		<select class="form-select" aria-label="Default select example" style="width:30%" onchange="window.parent.location. = this.value;">
+		<select class="form-select" aria-label="Default select example" style="width:30%" id="dynamic-select">
   <option value = "#" selected>50+ Population</option>
   <option value="https://ricadall.github.io/data-pop-total.html">Total Population</option>
   <option>65+ Population</option>
 </select>
 		</td>
+
+	    <script>
+    $('#dynamic-select').bind('change', function () { // bind change event to select
+        var url = $(this).val(); // get selected value
+        if (url != '') { // require a URL
+            window.location = url; // redirect
+        }
+        return false;
+    });
+</script>
     </tr>
     <tr>
         <td class="custom-left-column">Measure</td>
