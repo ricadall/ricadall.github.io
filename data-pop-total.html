@@ -177,6 +177,69 @@ $(document)
     border-radius: .28571429rem;
     transition: box-shadow .1s ease, width .1s ease;
 		}
+		
+		
+					
+			.dropbtn {
+  background-color: white;
+  color: #0f0f0f;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  min-width: 290px;
+				text-align: left;
+				padding-left: 20px;
+				padding-right: 20px;
+				border-radius: 5px;
+				border: 1px solid lightgray;
+				
+/*  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+  z-index: 98;
+  max-height: 0;
+  min-width: 290px;
+  transition: max-height 0.15s ease-out;
+  overflow: hidden;
+	
+}
+
+.dropdown-content a {
+  color: black;
+  background-color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  max-height: 500px;
+  min-width: 290px;
+  transition: max-height 0.25s ease-in;
+	z-index: 2000;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  transition: max-height 0.25s ease-in;
+}
+		
 			h2 {
 				font-family: 'Adobe Caslon Pro';
 				font-size:40px;
@@ -201,28 +264,6 @@ $(document)
 			
 <button type="button" class="btn btn-secondary" onclick="downloadExcel()">Download Excel</button>
 			
-			<script>
-function downloadExcel() {
-    // Create a simple Excel file with a sample data
-    const data = [
-        ["Name", "Age", "Country"],
-        ["Alice", 30, "USA"],
-        ["Bob", 25, "Canada"],
-        ["Charlie", 35, "UK"]
-    ];
-
-    let csvContent = "data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8," 
-                     + data.map(e => e.join(",")).join("\n");
-
-    const encodedUri = encodeURI(csvContent);
-    const link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "data.xlsx");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
-</script>
 
 		
 		</td>
@@ -237,28 +278,54 @@ function downloadExcel() {
     <tr>
         <td class="custom-left-column">Variable</td>
         <td class="custom-right-column">
+			
+			
+			<div class="dropdown">
+  <button class="dropbtn" for="btnControl">
+				
+	  <div style="float: left;">Total Population</div>
+<div style="float: right;">⌄</div>
+<div style="clear: both;"></div>
+				
+				
+				</button>
+  <div class="dropdown-content">
+    <a href="https://ricadall.github.io/index.html">50+ Population</a>
+    <a href="https://ricadall.github.io/data-pop-sixfive.html">65+ Population</a>
+  </div>
+</div>
+			
+
 		
 		
-		<select class="form-select" aria-label="Default select example" style="width:30%">
-  <option selected>Total Population</option>
-  <option value="1">50+ Population</option>
-  <option value="2">65+ Population</option>
+<!--
+		<select class="form-select" aria-label="Default select example" style="width:30%" >
+  <option value = "#" selected>50+ Population</option>
+  <option value = "Total Population"><a href="https://ricadall.github.io/data-pop-total.html">Total Population</a></option>
+  <option>65+ Population</option>
 </select>
+-->
 		</td>
+
+
     </tr>
     <tr>
         <td class="custom-left-column">Measure</td>
         <td class="custom-right-column">
 		
-		<select class="form-select" aria-label="Default select example" style="width:30%">
-  <option selected>Persons</option>
-<!--
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
--->
-</select>
-			
+			<div class="dropdown">
+  <button class="dropbtn" for="btnControl">
+				
+	  <div style="float: left;">Persons</div>
+<div style="float: right;">⌄</div>
+<div style="clear: both;"></div>
+				
+				
+				</button>
+  <div class="dropdown-content">
+
+  </div>
+</div>
 			
 		</td>
     </tr>
