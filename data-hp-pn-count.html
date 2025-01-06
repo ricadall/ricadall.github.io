@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<title>Table V05</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="https://colorlib.com/etc/tb/Table_Fixed_Column/images/icons/favicon.ico">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/tb/Table_Fixed_Column/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/tb/Table_Fixed_Column/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/tb/Table_Fixed_Column/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/tb/Table_Fixed_Column/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/tb/Table_Fixed_Column/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/tb/Table_Fixed_Column/css/util.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="dropdown.css">
+<!--===============================================================================================-->
+<meta name="robots" content="noindex, follow">
+<style>undefined</style><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="use-credentials"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swa">
+		
+		<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	
+	<style>
+    .table100-nextcols table {
+        table-layout: fixed; /* Ensure fixed column width */
+        width: 150%; 
+    }
+
+    .cell100 {
+        white-space: nowrap; /* Prevent text wrapping */
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+		
+	
+</style>
+		
+		<script>
+	semantic.dropdown = {};
+
+// ready event
+semantic.dropdown.ready = function() {
+
+  // selector cache
+  var
+    $examples         = $('.example'),
+    $hoverDropdown    = $examples.filter('.hover').find('.ui.dropdown'),
+    $clearingDropdown = $examples.filter('.clearing').find('.ui.dropdown'),
+    $buttonDropdown   = $examples.filter('.button.example').find('.ui.dropdown'),
+    $dropdown         = $examples.filter('.dropdown').find('.menu > .item > .ui.dropdown, .menu > .item.ui.dropdown, > .ui.dropdown:not(.simple), .inline.dropdown, .icon.buttons .button, .form .dropdown.selection'),
+    $transition       = $examples.filter('.transition').find('.ui.dropdown'),
+    $simpleDropdown   = $examples.filter('.simple').find('.ui.dropdown'),
+    $transitionButton = $examples.filter('.transition').find('.ui.button').first(),
+    $categoryDropdown = $examples.filter('.category').find('.ui.dropdown'),
+    // alias
+    handler
+  ;
+
+  // event handlers
+  handler = {
+
+  };
+
+  $transitionButton
+    .on('click', function(event) {
+      $transition.dropdown('toggle');
+      event.stopImmediatePropagation();
+    })
+  ;
+
+  $clearingDropdown
+    .dropdown({
+      clearable: true
+    })
+  ;
+
+  $transition
+    .dropdown({
+      onChange: function(value) {
+        $transition.dropdown('setting', 'transition', value);
+      }
+    })
+  ;
+
+  $categoryDropdown
+    .dropdown({
+      allowCategorySelection: true
+    })
+  ;
+
+  $dropdown
+    .dropdown()
+  ;
+  $hoverDropdown
+    .dropdown({
+      on: 'hover',
+      action: 'hide'
+    })
+  ;
+  $simpleDropdown
+    .dropdown({
+      action: 'hide'
+    })
+  ;
+  $buttonDropdown
+    .dropdown({
+      action: 'hide'
+    })
+  ;
+
+};
+
+
+// attach ready event
+$(document)
+  .ready(semantic.dropdown.ready)
+;
+	</script>
+		
+		<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout</title>
+    <style>
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+			margin-bottom: 1%;
+			 font-family: 'Adobe Caslon Pro';
+        }
+        .custom-table th, .custom-table td {
+            border: 2px solid white;
+            padding: 8px;
+            text-align: left;
+        }
+        .custom-left-column {
+            width: 15%;
+			background-color: #f0f0f0;
+			color:black;
+			padding-left:10%;
+        }
+		
+		
+        .custom-right-column {
+            width: 85%;
+			background-color: #f0f0f0;
+			color:black;
+        }
+		
+		.ui.selection.dropdown {
+    cursor: pointer;
+    word-wrap: break-word;
+    line-height: 1em;
+    white-space: normal;
+    outline: 0;
+    transform: rotateZ(0);
+    min-width: 14em;
+    min-height: 2.71428571em;
+    background: #fff;
+    display: inline-block;
+    padding: .78571429em 2.1em .78571429em 1em;
+    color: rgba(0, 0, 0, .87);
+    box-shadow: none;
+    border: 1px solid rgba(34, 36, 38, .15);
+    border-radius: .28571429rem;
+    transition: box-shadow .1s ease, width .1s ease;
+		}
+		
+		
+					
+			.dropbtn {
+  background-color: white;
+  color: #0f0f0f;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  min-width: 290px;
+				text-align: left;
+				padding-left: 20px;
+				padding-right: 20px;
+				border-radius: 5px;
+				border: 1px solid lightgray;
+				
+/*  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+  z-index: 98;
+  max-height: 0;
+  min-width: 290px;
+  transition: max-height 0.15s ease-out;
+  overflow: hidden;
+	
+}
+
+.dropdown-content a {
+  color: black;
+  background-color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  max-height: 500px;
+  min-width: 290px;
+  transition: max-height 0.25s ease-in;
+	z-index: 2000;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  transition: max-height 0.25s ease-in;
+}
+		
+			h2 {
+				font-family: 'Adobe Caslon Pro';
+				font-size:40px;
+			}
+		
+		
+		
+		.container-table100 {
+		}
+    </style>
+
+	</head>
+<body data-new-gr-c-s-check-loaded="14.1215.0" data-gr-ext-installed="">
+
+	<div class="limiter">
+		
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<h2 style="margin-bottom:1%">Healthcare Personnel: Practicing Nurses</h2>
+				
+				
+				<table class="custom-table">
+    <tr>
+        <td class="custom-left-column">
+		
+		
+			
+		<a href="https://docs.google.com/spreadsheets/d/1CCC6ITqFWHu4iB4GPC78jv5IRnwq44RC/edit?usp=sharing&ouid=107139678471022569127&rtpof=true&sd=true">
+		<button type="button" class="btn btn-secondary">Download Excel</button>
+		</a>
+			
+
+		
+		</td>
+        <td class="custom-right-column" style="padding-left:20px">
+
+		<a href="https://drive.google.com/file/d/1muUSkCmvLZBSLgVm_2_6Rklf-dAHXCJa/view?usp=sharing">
+		<button type="button" class="btn btn-secondary">Download CSV</button>
+		</a>
+		
+		</td>
+    </tr>
+    <tr>
+        <td class="custom-left-column">Variable</td>
+        <td class="custom-right-column">
+			
+			
+			<div class="dropdown">
+  <button class="dropbtn" for="btnControl">
+				
+	  <div style="float: left;">Practicing Nurses</div>
+<div style="float: right;">⌄</div>
+<div style="clear: both;"></div>
+				
+				
+				</button>
+  <div class="dropdown-content">
+    <a href="https://ricadall.github.io/data-hp-ds.html">Dementia Specialists</a>
+    <a href="https://ricadall.github.io/data-hp-pp.html">Practicing Physicians</a>
+	<a href="https://ricadall.github.io/data-hp-pcp.html">Primary Care Physicians</a>
+	<a href="https://ricadall.github.io/data-hp-ger.html">Geriatricians</a>
+	<a href="https://ricadall.github.io/data-hp-neur.html">Neurologists</a>
+	<a href="https://ricadall.github.io/data-hp-psych.html">Psychiatrists</a>
+  </div>
+</div>
+			
+
+		
+		
+<!--
+		<select class="form-select" aria-label="Default select example" style="width:30%" >
+  <option value = "#" selected>50+ Population</option>
+  <option value = "Total Population"><a href="https://ricadall.github.io/data-pop-total.html">Total Population</a></option>
+  <option>65+ Population</option>
+</select>
+-->
+		</td>
+
+
+    </tr>
+    <tr>
+        <td class="custom-left-column">Measure</td>
+        <td class="custom-right-column">
+		
+			<div class="dropdown">
+  <button class="dropbtn" for="btnControl">
+				
+	  <div style="float: left;">Persons (count)</div>
+<div style="float: right;">⌄</div>
+<div style="clear: both;"></div>
+				
+				
+				</button>
+  <div class="dropdown-content">
+	  <a href="https://ricadall.github.io/data-hp-pn.html">Persons per million population</a>
+  </div>
+</div>
+			
+		</td>
+    </tr>
+</table>
+				
+				
+				<div class="table100 ver1">
+					
+					
+					
+					
+					
+					
+					
+					<div class="table100-firstcol">
+						<table>
+							<thead>
+								<tr class="row100 head" style="border-bottom-color: #FFCC00;border-bottom-width:0px;font-weight: 500">
+									<th class="cell100 column1">Country</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="row100 body">
+									<td class="cell100 column1">Australia</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">Brazil</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">Canada</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">France</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">Germany</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">Italy</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">Japan</td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">South Korea</td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">Spain</td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">Sweden</td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">Taiwan</td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">United Kingdom</td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">United States</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="wrap-table100-nextcols js-pscroll ps ps--active-x">
+						<div class="table100-nextcols">
+							<table>
+								<thead><b>
+									<tr class="row100 head" style="border-bottom-color: #FFCC00;border-bottom-width:0px; ">
+										
+										    <th class="cell100 column18">2010</th>
+											<th class="cell100 column19">2011</th>
+										    <th class="cell100 column18">2012</th>
+											<th class="cell100 column19">2013</th>
+											<th class="cell100 column20">2014</th>
+											<th class="cell100 column21">2015</th>
+										
+											<th class="cell100 column18">2016</th>
+											<th class="cell100 column19">2017</th>
+											<th class="cell100 column20">2018</th>
+											<th class="cell100 column21">2019</th>
+											<th class="cell100 column22">2020</th>
+											<th class="cell100 column23">2021</th>
+
+									</tr></b>
+								</thead>
+<tbody>
+<tr class="row100 body">
+<td class="cell100 column2"></td>
+<td class="cell100 column3">227,712</td>
+<td class="cell100 column4">232,321</td>
+<td class="cell100 column5">257,189</td>
+<td class="cell100 column6">264,876</td>
+<td class="cell100 column7">271,151</td>
+<td class="cell100 column8">279,789</td>
+<td class="cell100 column9">287,405</td>
+<td class="cell100 column10">297,807</td>
+<td class="cell100 column11">309,906</td>
+<td class="cell100 column12">315,017</td>
+<td class="cell100 column13"></td>
+</tr>
+</tbody>
+
+<tbody>
+<tr class="row100 body">
+<td class="cell100 column2">130,779</td>
+<td class="cell100 column3">142,577</td>
+<td class="cell100 column4">157,949</td>
+<td class="cell100 column5">175,526</td>
+<td class="cell100 column6">196,417</td>
+<td class="cell100 column7">209,216</td>
+<td class="cell100 column8">221,151</td>
+<td class="cell100 column9">234,882</td>
+<td class="cell100 column10">251,777</td>
+<td class="cell100 column11">267,729</td>
+<td class="cell100 column12">301,558</td>
+<td class="cell100 column13">331,630</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr class="row100 body">
+<td class="cell100 column2">318,565</td>
+<td class="cell100 column3">319,026</td>
+<td class="cell100 column4">326,227</td>
+<td class="cell100 column5">334,570</td>
+<td class="cell100 column6">347,636</td>
+<td class="cell100 column7">353,738</td>
+<td class="cell100 column8">359,473</td>
+<td class="cell100 column9">365,450</td>
+<td class="cell100 column10">368,664</td>
+<td class="cell100 column11">375,312</td>
+<td class="cell100 column12">382,839</td>
+<td class="cell100 column13"></td>
+</tr>
+</tbody>
+
+<tbody>
+<tr class="row100 body">
+<td class="cell100 column2"></td>
+<td class="cell100 column3"></td>
+<td class="cell100 column4">567,363</td>
+<td class="cell100 column5">595,394</td>
+<td class="cell100 column6">616,573</td>
+<td class="cell100 column7">638,248</td>
+<td class="cell100 column8">660,611</td>
+<td class="cell100 column9">681,459</td>
+<td class="cell100 column10">700,988</td>
+<td class="cell100 column11">722,572</td>
+<td class="cell100 column12">744,307</td>
+<td class="cell100 column13">764,260</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr class="row100 body">
+<td class="cell100 column2">807,000</td>
+<td class="cell100 column3">814,000</td>
+<td class="cell100 column4">820,000</td>
+<td class="cell100 column5">850,000</td>
+<td class="cell100 column6">868,000</td>
+<td class="cell100 column7">876,000</td>
+<td class="cell100 column8">895,000</td>
+<td class="cell100 column9">916,000</td>
+<td class="cell100 column10">955,000</td>
+<td class="cell100 column11">980,000</td>
+<td class="cell100 column12">1,003,000</td>
+<td class="cell100 column13"></td>
+</tr>
+</tbody>
+
+<tbody>
+<tr class="row100 body">
+<td class="cell100 column2">310,005</td>
+<td class="cell100 column3">308,902</td>
+<td class="cell100 column4">304,196</td>
+<td class="cell100 column5">306,044</td>
+<td class="cell100 column6">320,705</td>
+<td class="cell100 column7">330,602</td>
+<td class="cell100 column8">337,515</td>
+<td class="cell100 column9">351,008</td>
+<td class="cell100 column10">346,947</td>
+<td class="cell100 column11">367,684</td>
+<td class="cell100 column12">373,064</td>
+<td class="cell100 column13">370,887</td>
+</tr>
+</tbody>
+
+								
+<tbody>
+<tr class="row100 body">
+<td class="cell100 column2">1,294,234</td>
+<td class="cell100 column3"></td>
+<td class="cell100 column4">1,344,388</td>
+<td class="cell100 column5"></td>
+<td class="cell100 column6">1,394,985</td>
+<td class="cell100 column7"></td>
+<td class="cell100 column8">1,439,721</td>
+<td class="cell100 column9"></td>
+<td class="cell100 column10">1,487,444</td>
+<td class="cell100 column11"></td>
+<td class="cell100 column12">1,526,740</td>
+<td class="cell100 column13"></td>
+</tr>
+</tbody>
+
+<tbody>
+<tr class="row100 body">
+<td class="cell100 column2">228,614</td>
+<td class="cell100 column3">235,116</td>
+<td class="cell100 column4">242,249</td>
+<td class="cell100 column5">262,001</td>
+<td class="cell100 column6">282,846</td>
+<td class="cell100 column7">303,133</td>
+<td class="cell100 column8">349,679</td>
+<td class="cell100 column9">356,880</td>
+<td class="cell100 column10">373,601</td>
+<td class="cell100 column11">410,694</td>
+<td class="cell100 column12">433,993</td>
+<td class="cell100 column13"></td>
+</tr>
+</tbody>
+
+<tbody>
+<tr class="row100 body">
+<td class="cell100 column2">239,867</td>
+<td class="cell100 column3">243,967</td>
+<td class="cell100 column4">245,300</td>
+<td class="cell100 column5">239,767</td>
+<td class="cell100 column6">239,333</td>
+<td class="cell100 column7">245,533</td>
+<td class="cell100 column8">256,333</td>
+<td class="cell100 column9">267,266</td>
+<td class="cell100 column10">274,633</td>
+<td class="cell100 column11">277,633</td>
+<td class="cell100 column12">289,100</td>
+<td class="cell100 column13"></td>
+</tr>
+</tbody>
+
+<tbody>
+<tr class="row100 body">
+<td class="cell100 column2">101,874</td>
+<td class="cell100 column3">102,987</td>
+<td class="cell100 column4">104,123</td>
+<td class="cell100 column5">105,277</td>
+<td class="cell100 column6">106,275</td>
+<td class="cell100 column7">107,529</td>
+<td class="cell100 column8">108,670</td>
+<td class="cell100 column9">109,781</td>
+<td class="cell100 column10">110,707</td>
+<td class="cell100 column11">111,533</td>
+<td class="cell100 column12"></td>
+<td class="cell100 column13"></td>
+</tr>
+</tbody>
+
+<tbody>
+<tr class="row100 body">
+<td class="cell100 column2"></td>
+<td class="cell100 column3"></td>
+<td class="cell100 column4"></td>
+<td class="cell100 column5"></td>
+<td class="cell100 column6"></td>
+<td class="cell100 column7"></td>
+<td class="cell100 column8">158,318</td>
+<td class="cell100 column9">163,736</td>
+<td class="cell100 column10">169,454</td>
+<td class="cell100 column11">175,029</td>
+<td class="cell100 column12">180,153</td>
+<td class="cell100 column13">185,015</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr class="row100 body">
+<td class="cell100 column2">527,560</td>
+<td class="cell100 column3">518,756</td>
+<td class="cell100 column4">505,867</td>
+<td class="cell100 column5">509,202</td>
+<td class="cell100 column6">512,714</td>
+<td class="cell100 column7">514,850</td>
+<td class="cell100 column8">516,974</td>
+<td class="cell100 column9">516,930</td>
+<td class="cell100 column10">535,128</td>
+<td class="cell100 column11">547,661</td>
+<td class="cell100 column12">567,803</td>
+<td class="cell100 column13">584,359</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr class="row100 body">
+<td class="cell100 column2">1,752,113</td>
+<td class="cell100 column3">1,965,534</td>
+<td class="cell100 column4">2,058,961</td>
+<td class="cell100 column5">2,061,647</td>
+<td class="cell100 column6">2,183,447</td>
+<td class="cell100 column7">2,227,835</td>
+<td class="cell100 column8">2,317,493</td>
+<td class="cell100 column9">2,396,467</td>
+<td class="cell100 column10">2,438,923</td>
+<td class="cell100 column11">2,523,490</td>
+<td class="cell100 column12">2,446,493</td>
+<td class="cell100 column13"></td>
+</tr>
+</tbody>
+								
+								
+								
+								
+								
+								
+							</table>
+						</div>
+					<div class="ps__rail-x" style="width: 1124px; left: 0px; bottom: 10px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 639px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!--===============================================================================================-->
+	<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://colorlib.com/etc/tb/Table_Fixed_Column/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="https://colorlib.com/etc/tb/Table_Fixed_Column/vendor/bootstrap/js/popper.js"></script>
+	<script src="https://colorlib.com/etc/tb/Table_Fixed_Column/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="https://colorlib.com/etc/tb/Table_Fixed_Column/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="https://colorlib.com/etc/tb/Table_Fixed_Column/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+
+			$(this).on('ps-x-reach-start', function(){
+				$(this).parent().find('.table100-firstcol').removeClass('shadow-table100-firstcol');
+			});
+
+			$(this).on('ps-scroll-x', function(){
+				$(this).parent().find('.table100-firstcol').addClass('shadow-table100-firstcol');
+			});
+
+		});
+
+
+
+
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+	
+	<script>
+	semantic.dropdown = {};
+
+// ready event
+semantic.dropdown.ready = function() {
+
+  // selector cache
+  var
+    $examples         = $('.example'),
+    $hoverDropdown    = $examples.filter('.hover').find('.ui.dropdown'),
+    $clearingDropdown = $examples.filter('.clearing').find('.ui.dropdown'),
+    $buttonDropdown   = $examples.filter('.button.example').find('.ui.dropdown'),
+    $dropdown         = $examples.filter('.dropdown').find('.menu > .item > .ui.dropdown, .menu > .item.ui.dropdown, > .ui.dropdown:not(.simple), .inline.dropdown, .icon.buttons .button, .form .dropdown.selection'),
+    $transition       = $examples.filter('.transition').find('.ui.dropdown'),
+    $simpleDropdown   = $examples.filter('.simple').find('.ui.dropdown'),
+    $transitionButton = $examples.filter('.transition').find('.ui.button').first(),
+    $categoryDropdown = $examples.filter('.category').find('.ui.dropdown'),
+    // alias
+    handler
+  ;
+
+  // event handlers
+  handler = {
+
+  };
+
+  $transitionButton
+    .on('click', function(event) {
+      $transition.dropdown('toggle');
+      event.stopImmediatePropagation();
+    })
+  ;
+
+  $clearingDropdown
+    .dropdown({
+      clearable: true
+    })
+  ;
+
+  $transition
+    .dropdown({
+      onChange: function(value) {
+        $transition.dropdown('setting', 'transition', value);
+      }
+    })
+  ;
+
+  $categoryDropdown
+    .dropdown({
+      allowCategorySelection: true
+    })
+  ;
+
+  $dropdown
+    .dropdown()
+  ;
+  $hoverDropdown
+    .dropdown({
+      on: 'hover',
+      action: 'hide'
+    })
+  ;
+  $simpleDropdown
+    .dropdown({
+      action: 'hide'
+    })
+  ;
+  $buttonDropdown
+    .dropdown({
+      action: 'hide'
+    })
+  ;
+
+};
+
+
+// attach ready event
+$(document)
+  .ready(semantic.dropdown.ready)
+;
+	</script>
+
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;8fc6401b4d3c7bf5&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2024.10.5&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;}" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
